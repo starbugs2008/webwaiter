@@ -1,0 +1,71 @@
+{
+    "caseID": "Contact",
+    "title": "Contact ",
+    "pages": [
+        {
+            "type": "form",
+            "Rows": [
+              {
+                "type": "form",
+                "className":" ",
+                "Rows": [
+                  [
+                    {
+                      "key": "info",
+                      "label": "",
+                      "type":"headline"
+                    }
+                  ]
+                ]
+              },
+        {
+            "type": "form",
+            "className": "row",
+            "Rows": [
+                [
+                    {
+                        "key": "firstName",
+                        "label": "First"
+                    },
+                    {
+                        "key": "lastName",
+                        "label": "Last"
+                    }
+                ],
+                [
+                    {
+                        "key": "email",
+                        "label": "email"
+                    }
+                ],
+                [
+                    {
+                        "key": "phone",
+                        "label": "phone"
+                    }
+                ],
+                [
+                    {
+                        "key": "subject",
+                        "label": "subject"
+                    }
+                ],
+                [
+                    {
+                        "key": "message",
+                        "label": "message",
+                        "type": "textarea"
+                    }
+                ]
+            ],
+            "actions": [
+                {
+                    "id": "Submit",
+                    "label": "Submit",
+                    "className": "center-block"
+                }
+            ]
+        }
+    ],
+    "display_type": "form"
+}

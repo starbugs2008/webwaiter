@@ -1,0 +1,36 @@
+{
+    "caseID": "demo",
+    "pages": [
+        {
+            "type": "form",
+            "className":" ",
+            "Rows": [
+              [
+                {
+                  "key": "info",
+                  "label": "demo",
+                  "type":"headline"
+                }
+              ]
+            ]
+          },
+        {
+            "type": "form",
+            "Rows": [
+                [
+                    {
+                        "key":"key1"
+                    }
+                   
+                ]
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "id": "",
+            "label": "submit"
+        }
+    ],
+    "className": ""
+}

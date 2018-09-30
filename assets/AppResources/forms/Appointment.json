@@ -1,0 +1,82 @@
+{
+    "caseID": "Appointment",
+    "pages": [
+      {
+        "type": "form",
+        "className":" ",
+        "Rows": [
+          [
+            {
+              "key": "info",
+              "label": "Appointment Form",
+              "type":"headline"
+            }
+          ]
+        ]
+      },
+      {
+        "type": "form",
+        "Rows": [
+          [
+            {
+              "template": "If you would like to arrange for a consultation appointment with Ms.Zhou to disccuse about your project, please fill out this Appointment Form and we will get back to you as soon as possible.",
+              "className": "text-center"
+            }
+          ],
+          [
+            {
+              "key": "Date",
+              "label": "Appointment Date",
+              "type": "date"
+            },
+            {
+              "key": "Time",
+              "label": "Appointment Time"
+            }
+          ],
+          [
+            {
+              "key": "first",
+              "label": "first Name"
+            },
+            {
+              "key": "last",
+              "label": "last Name"
+            }
+          ],
+          [
+            {
+              "key": "Address",
+              "label": "Address"
+            }
+          ],
+          [
+            {
+              "key": "Address",
+              "label": "Address  Line2"
+            }
+          ],
+          [
+            {
+              "key": "city",
+              "label": "city"
+            },
+            {
+              "key": "region",
+              "label": "region"
+            },
+            {
+              "key": "zip",
+              "label": "zip Code"
+            }
+          ]
+        ],
+        "actions": [
+          {
+            "id": "Submit",
+            "label": "Send Appointment Form"
+          }
+        ]
+      }
+    ]
+  }

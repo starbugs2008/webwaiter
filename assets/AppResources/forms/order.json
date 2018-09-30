@@ -1,0 +1,116 @@
+{
+    "caseID": "Order",
+    "pages": [
+        {
+            "type": "form",
+            "className":" ",
+            "Rows": [
+              [
+                {
+                  "key": "info",
+                  "label": "Order Form ",
+                  "type":"headline"
+                }
+              ]
+            ]
+          },
+        {
+            "type": "form",
+            "Rows": [
+                [
+                    {
+                        "template": "Use this fully-responsive order form template and start accepting online orders in no time. You can easily customize it to match your business needs and your brand identity.",
+                        "className": "text-center"
+                    }
+                ],
+                [
+                    {
+                        "key": "first",
+                        "label": "first*",
+                        "require": "true"
+                    },
+                    {
+                        "key": "last",
+                        "label": "last"
+                    }
+                ],
+                [
+                    {
+                        "key": "email",
+                        "label": "email"
+                    },
+                    {
+                        "key": "phone",
+                        "label": "phone"
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "form",
+            "Rows": [
+                [
+                    {
+                        "key": "products",
+                        "label": "Choose your preferred product",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "key": "p1",
+                                "value": "product 1"
+                            },
+                            {
+                                "key": "p2",
+                                "value": "product 2"
+                            },
+                            {
+                                "key": "p3",
+                                "value": "product 3"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "Quantity",
+                        "label": "Quantity"
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "form",
+            "title": "Delivery",
+            "Rows": [
+                [
+                    {
+                        "key": "Address",
+                        "label": "Address"
+                    },
+                    {
+                        "key": "Address",
+                        "label": "Address  Line2"
+                    }
+                ],
+                [
+                    {
+                        "key": "city",
+                        "label": "city"
+                    },
+                    {
+                        "key": "region",
+                        "label": "region"
+                    },
+                    {
+                        "key": "zip",
+                        "label": "zip Code"
+                    }
+                ]
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "id": "Submit",
+            "label": "Send Order"
+        }
+    ]
+}

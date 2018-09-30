@@ -1,0 +1,127 @@
+{
+  "caseID": "chicken",
+  "pages": [
+    {
+      "type": "form",
+      "Rows": [
+        {
+          "type": "form",
+          "className":" ",
+          "Rows": [
+            [
+              {
+                "key": "info",
+                "label": "chicken",
+                "type":"headline"
+              }
+            ]
+          ]
+        },
+    {
+      "type": "form",
+      "Rows": [
+        [
+          {
+            "type": "description",
+            "defaultValue": {
+              "event":"myorder",
+              "className": "fas fa-info-circle",
+              "content": {
+                "Rows": [
+                  [
+                    {
+                      "content": "Spice Tuna Roll*",
+                      "className": "col-md-8"
+                    },
+                    {
+                      "content": "3.95",
+                      "className": "col-md-4"
+                    }
+                  ]
+                ]
+              },
+              "image": {
+                "src": "http://www.gingerred.com/images/ginger_red_logo_gif.gif",
+                "width": "40px",
+                "heigth": "40px"
+              },
+              "detail": {
+                "Rows": [
+                  [
+                    {
+                      "content": "spicy tuna, cucumber and top with sesame",
+                      "className": "col-md-12"
+                    }
+                  ]
+                ]
+              }
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "type": "form",
+      "title": "my order",
+      "Rows": [
+        {
+          "key": "myorder",
+          "type": "repeat",
+          "defaultValue":{
+            "Food":[0,0],
+            "price":[0,1]
+          },
+          "model": [
+            {
+              "Food": "Spice Tuna Roll1",
+              "Qty": 1,
+              "price": "4.99"
+            }
+          ],
+          "fieldArray": {
+            "fieldGroupClassName": "row",
+            "Rows": [
+              [
+                {
+                  "key": "Food",
+                  "label": "Food:",
+                  "index":true
+                },
+                {
+                  "key": "Qty",
+                  "label": "Qty:",
+                  "defaultValue":1
+                },
+                {
+                  "key": "price",
+                  "label": "price:"
+                }
+              ]
+            ]
+          }
+        },
+        [
+          {
+            "key": "total",
+            "label": "total"
+          }
+        ],
+        [
+          {
+            "key": "phene",
+            "label": "phone"
+          },
+          {
+            "key": "table",
+            "label": "table",
+            "type": "select"
+          },
+          {
+            "key": "waiter",
+            "label": "waiter"
+          }
+        ]
+      ]
+    }
+  ]
+}

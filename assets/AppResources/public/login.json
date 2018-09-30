@@ -1,0 +1,59 @@
+{
+  "caseID": "Login",
+  "actions": [
+    {
+      "id": "submit",
+      "label": "Submit"
+    }
+  ],
+  "pages": [
+    {
+      "type": "form",
+      "className":" ",
+      "Rows": [
+        [
+          {
+            "key": "info",
+            "label": "Sign In",
+            "type":"headline"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "form",
+      "Rows": [
+        [
+          {
+            "key": "UserID",
+            "label": "User ID"
+          },
+          {
+            "key": "Password",
+            "label": "Password"
+          }
+        ],
+        [
+          {
+            "key": "Remember",
+            "label": "Remember me ",
+            "defaultValue": "false",
+            "type": "checkbox"
+          }
+        ],
+        [
+          {
+            "template": "<a href='#/auth/register'>registered?</a>",
+            "className": "col-md-10"
+          }
+        ],
+        [
+          {
+            "template": "<a href='#/auth/forgotpassword'>Forgot your Login ID or Password?</a>",
+            "className": "col-md-10"
+          }
+        ]
+      ]
+    }
+  ]
+}

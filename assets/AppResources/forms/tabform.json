@@ -1,0 +1,304 @@
+{
+    "caseID": "tabform",
+    "pages": [
+        {
+            "type": "form",
+            "Rows": [
+              {
+                "type": "form",
+                "className":" ",
+                "Rows": [
+                  [
+                    {
+                      "key": "info",
+                      "label": "Appointment Form",
+                      "type":"headline"
+                    }
+                  ]
+                ]
+              },
+        {
+            "type": "tabgroup",
+            "sections": [
+                {
+                    "type": "pages",
+                    "pages": [
+                        {
+                            "type": "form",
+                            "className":" ",
+                            "Rows": [
+                              [
+                                {
+                                  "key": "info",
+                                  "label": "Order Form ",
+                                  "type":"headline"
+                                }
+                              ]
+                            ]
+                          },
+                        {
+                            "type": "form",
+                            "Rows": [
+                                [
+                                    {
+                                        "template": "If you would like to arrange for a consultation appointment with Ms.Zhou to disccuse about your project, please fill out this Appointment Form and we will get back to you as soon as possible.",
+                                        "className": "text-center"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "Date",
+                                        "label": "Appointment Date",
+                                        "type": "date"
+                                    },
+                                    {
+                                        "key": "Time",
+                                        "label": "Appointment Time"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "first",
+                                        "label": "first Name"
+                                    },
+                                    {
+                                        "key": "last",
+                                        "label": "last Name"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "Address",
+                                        "label": "Address"
+                                    },
+                                    {
+                                        "key": "Address",
+                                        "label": "Address  Line2"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "city",
+                                        "label": "city"
+                                    },
+                                    {
+                                        "key": "region",
+                                        "label": "region"
+                                    },
+                                    {
+                                        "key": "zip",
+                                        "label": "zip Code"
+                                    }
+                                ]
+                            ],
+                            "actions": [
+                                {
+                                    "id": "Submit",
+                                    "label": "Send Appointment Form"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "form",
+                    "pages": [
+                        {
+                            "type": "form",
+                            "Rows": [
+                              {
+                                "type": "form",
+                                "className":" ",
+                                "Rows": [
+                                  [
+                                    {
+                                      "key": "info",
+                                      "label": "contact",
+                                      "type":"headline"
+                                    }
+                                  ]
+                                ]
+                              },
+                        {
+                            "type": "form",
+                            "className": "row",
+                            "Rows": [
+                                [
+                                    {
+                                        "key": "firstName",
+                                        "label": "First"
+                                    },
+                                    {
+                                        "key": "lastName",
+                                        "label": "Last"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "email",
+                                        "label": "email"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "phone",
+                                        "label": "phone"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "subject",
+                                        "label": "subject"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "message",
+                                        "label": "message",
+                                        "type": "textarea"
+                                    }
+                                ]
+                            ],
+                            "actions": [
+                                {
+                                    "id": "Submit",
+                                    "label": "Submit",
+                                    "className": "center-block"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "order form",
+                    "type": "form",
+                    "pages": [
+                        {
+                            "type": "form",
+                            "Rows": [
+                              {
+                                "type": "form",
+                                "className":" ",
+                                "Rows": [
+                                  [
+                                    {
+                                      "key": "info",
+                                      "label": "",
+                                      "type":"headline"
+                                    }
+                                  ]
+                                ]
+                              },
+                        {
+                            "type": "form",
+                            "Rows": [
+                                [
+                                    {
+                                        "template": "Use this fully-responsive order form template and start accepting online orders in no time. You can easily customize it to match your business needs and your brand identity.",
+                                        "className": "text-center"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "first",
+                                        "label": "first*",
+                                        "require": "true"
+                                    },
+                                    {
+                                        "key": "last",
+                                        "label": "last"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "email",
+                                        "label": "email"
+                                    },
+                                    {
+                                        "key": "phone",
+                                        "label": "phone"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "form",
+                            "Rows": [
+                                [
+                                    {
+                                        "key": "products",
+                                        "label": "Choose your preferred product",
+                                        "type": "radio",
+                                        "options": [
+                                            {
+                                                "key": "p1",
+                                                "value": "product 1"
+                                            },
+                                            {
+                                                "key": "p2",
+                                                "value": "product 2"
+                                            },
+                                            {
+                                                "key": "p3",
+                                                "value": "product 3"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "key": "Quantity",
+                                        "label": "Quantity"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "form",
+                            "Rows": [
+                                {
+                                    "type": "form",
+                                    "Rows": [
+                                      {
+                                        "type": "form",
+                                        "className":"Delivery",
+                                        "Rows": [
+                                          [
+                                            {
+                                              "key": "info",
+                                              "label": "",
+                                              "type":"headline"
+                                            }
+                                          ]
+                                        ]
+                                      },
+                                [
+                                    {
+                                        "key": "Address",
+                                        "label": "Address"
+                                    },
+                                    {
+                                        "key": "Address",
+                                        "label": "Address  Line2"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "key": "city",
+                                        "label": "city"
+                                    },
+                                    {
+                                        "key": "region",
+                                        "label": "region"
+                                    },
+                                    {
+                                        "key": "zip",
+                                        "label": "zip Code"
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

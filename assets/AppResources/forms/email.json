@@ -1,0 +1,47 @@
+{
+    "caseID": "email",
+    "pages": [
+      {
+        "type": "form",
+        "className":" ",
+        "Rows": [
+          [
+            {
+              "key": "info",
+              "label": "Send Email",
+              "type":"headline"
+            }
+          ]
+        ]
+      },
+      {
+        "type": "form",
+        "Rows": [
+          [
+            {
+              "key": "To",
+              "label": "To"
+            }
+          ],
+          [
+            {
+              "key": "Subject",
+              "label": "Subject"
+            }
+          ],
+          [
+            {
+              "key": "Body",
+              "label": "Body",
+              "type": "textarea"
+            }
+          ]
+        ],
+        "actions": [
+          {
+            "label": "send"
+          }
+        ]
+      }
+    ]
+  }

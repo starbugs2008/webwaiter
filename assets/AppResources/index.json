@@ -1,0 +1,128 @@
+{
+  "basepath": {
+    "uipath": "/assets/AppResources/",
+    "datapath": "/assets/data/",
+    "libpath": "/assets/AppResources/"
+  },
+  "Resources": {
+    "defaultDomin": [
+      "public",
+      "forms","restaurant"
+    ],
+    "view": [
+      {
+        "caseID": "contact",
+        "paths": {
+          "uiDefPath": "contact.json"
+        }
+      }
+    ],
+    "public": [
+     
+      {
+        "caseID": "login",
+        "paths": {
+          "uiDefPath": "login.json"
+        },
+        "menu": {
+          "label": "login",
+          "level": "level0",
+          "path": "public/login"
+        }
+      },
+      {
+        "caseID": "loginfail",
+        "ui": "public/loginfail.json"
+      }
+    ],
+    "forms": [
+      {
+        "caseID": "Appointment",
+        "paths": {
+          "uiDefPath": "Appointment.json"
+        },
+        "menu": {
+          "label": "Appointment Form",
+          "level": "level1",
+          "path": "forms/Appointment"
+        }
+      },
+      {
+        "caseID": "email",
+        "paths": {
+          "uiDefPath": "email.json"
+        },
+        "menu": {
+          "label": "Send Email",
+          "level": "level1",
+          "path": "forms/email"
+        }
+      },
+      {
+        "caseID": "contact",
+        "paths": {
+          "uiDefPath": "contact.json"
+        },
+        "menu": {
+          "label": "contact",
+          "path": "forms/contact",
+          "level": ""
+        }
+      },
+      {
+        "caseID": "order",
+        "paths": {
+          "uiDefPath": "order.json"
+        },
+        "menu": {
+          "label": "order form",
+          "path": "forms/order",
+          "level": ""
+        }
+      },
+      {
+        "caseID": "tabform",
+        "paths": {
+          "uiDefPath": "tabform.json"
+        },
+        "menu": {
+          "label": "tabforms",
+          "path": "forms/tabform",
+          "level": ""
+        }
+      }
+    ],
+    "restaurant":[
+      {
+        "caseID": "restaurantmenu",
+        "paths": {
+          "uiDefPath": "restaurantmenu.json"
+        },
+        "menu": {
+          "label": "Restaurantmenu Menu",
+          "level": "level0",
+          "path": "restaurant/restaurantmenu"
+        }
+      },
+      {
+        "caseID": "beef",
+        "paths": {
+          "uiDefPath": "beef.json"
+        }
+      },
+      {
+        "caseID": "chicken",
+        "paths": {
+          "uiDefPath": "chicken.json"
+        }
+      },
+      {
+        "caseID": "fish",
+        "paths": {
+          "uiDefPath": "fish.json"
+        }
+      }
+      
+    ]
+  }
+}

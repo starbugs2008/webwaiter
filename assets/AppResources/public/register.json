@@ -1,0 +1,65 @@
+{
+  "caseID": "register",
+  "title": "register",
+  "actions": [
+    {
+      "id": "submit",
+      "label": "Create an Account"
+    }
+  ],
+  "pages": [
+    {
+      "type": "form",
+      "Rows": [
+        {
+          "type": "form",
+          "className":" ",
+          "Rows": [
+            [
+              {
+                "key": "info",
+                "label": "",
+                "type":"headline"
+              }
+            ]
+          ]
+        },
+    {
+      "type": "form",
+     "Rows": [
+        [
+          {
+            "key": "Email",
+            "label": "Email address"
+          }
+        ],
+        [
+          {
+            "key": "UserID",
+            "label": "User ID"
+          }
+        ],
+        [
+          {
+            "key": "Password",
+            "label": "Password"
+          }
+        ],
+        [
+            {
+              "key": "Phone",
+              "label": "Password"
+            }
+          ],
+        [
+          {
+            "key": "Remember",
+            "label": "Remember me ",
+            "defaultValue": "false",
+            "type": "checkbox"
+          }
+        ]
+      ]
+    }
+  ]
+}
