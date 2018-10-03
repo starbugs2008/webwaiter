@@ -1,0 +1,52 @@
+[
+  {
+    "libId": "lib_city",
+    "lib_city": [
+      [
+        {
+          "key": "city",
+          "label": "City"
+        },
+        {
+          "key": "state",
+          "label": "State"
+        },
+        {
+          "key": "zip",
+          "label": "Zip Code"
+        }
+      ]
+    ]
+  },
+  {
+    "libId": "address",
+    "address": [
+      [
+        {
+          "key": "address1",
+          "label": "Street Address Line #1 "
+        }
+      ],
+      [
+        {
+          "key": "address2",
+          "label": "Street Address Line #2 "
+        }
+      ],
+      [
+        {
+          "key": "city",
+          "label": "City"
+        },
+        {
+          "key": "state",
+          "label": "State"
+        },
+        {
+          "key": "zip",
+          "label": "Zip Code"
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "caseID": "loginfail",
+  "pages": [
+    {
+      "type": "form",
+      "Rows": [
+        [
+          {
+            "template": "login  failed ",
+            "className":"col-md-11"
+          }
+        ]
+      ],
+      "actions": [
+        {
+          "id": "Submit",
+          "label": "login",
+          "redirect": "public/login"
+        }
+      ]
+    }
+  ]
+}

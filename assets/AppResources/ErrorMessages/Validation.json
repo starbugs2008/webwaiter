@@ -1,0 +1,9 @@
+{
+  "username": "user name need to be test",
+  "required": "Required",
+  "creditCard": "Is invalid credit card number",
+  "email": "Invalid email address",
+  "password": "Invalid password. Password must be at least 6 characters long, and contain a number.",
+  "invalidNameField": "Invalid name field",
+  "DOB":"  The Infant & Toddler Connection of Virginia serves children through age 2.  Since this child is older, we are unable to accept this referral.  Please consider referring him/her to the local school division for preschool special education services.  Dial 211 to locate local school division contact information"
+}

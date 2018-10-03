@@ -1,0 +1,24 @@
+{
+ 
+  "SaveEditCancel": [
+    {
+      "id": "SaveAction",
+      "label": "Save"
+    },
+    {
+      "id": "EditAction",
+      "label": "Edit"
+    },
+    {
+      "id": "CancelAction",
+      "label": "Cancel"
+    }
+  ],
+
+  "addnew": [
+    {
+      "id": "NewAction",
+      "label": "add new"
+    }
+  ]
+}

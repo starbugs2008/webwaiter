@@ -1,0 +1,36 @@
+[
+  {
+    "libId": "headline",
+    "headline": [
+      [
+        {
+          "type": "info",
+          "className": "headline"
+        }
+      ]
+    ]
+  },
+  {
+    "libId": "pagetitle",
+    "pagetitle": [
+      [
+        {
+          "type": "info",
+          "className": "pagetitle"
+        }
+      ]
+    ]
+  },
+  {
+    "libId": "formtitle",
+    "formtitle": [
+      [
+        {
+          "type": "info",
+          "className": "formtitle"
+        }
+      ]
+    ]
+  }
+
+]

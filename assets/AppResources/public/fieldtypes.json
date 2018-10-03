@@ -1,0 +1,344 @@
+{
+  "caseID": "fieldtypes",
+  "group": [{
+      "type": "pages",
+      "className": "grid-item",
+      "pages": [
+        {
+          "type": "form",
+          "hideExpression": "model.selType !=='headline' && model.selType !== 'All' ",
+          "Rows": [
+            [{
+              "type": "info",
+              "label": "headline"
+            }],
+
+            [{
+              "label": " Types Examples",
+              "type": "info",
+              "className": "headline"
+            }],
+            [{
+              "type": "code",
+              "hideExpression": "model.hidecode",
+              "label": {
+                "label": " Types Examples",
+                "type": "info",
+                "className": "headline"
+              }
+            }]
+          ]
+        },
+        {
+          "type": "form",
+          "hideExpression": "model.selType !=='headline' && model.selType !== 'All' ",
+          "Rows": [
+            [{
+              "type": "info",
+              "label": "Headline with LibId"
+            }],
+            {
+              "libId": "headline",
+              "label": "Headline with LibId"
+            },
+            [{
+              "type": "code",
+              "hideExpression": "model.hidecode",
+              "label":  {
+                "libId": "headline",
+                "label": "Headline with LibId"
+              }
+            }]
+          ]
+        },
+        {
+          "type": "form",
+          "hideExpression": "model.selType !=='basic' && model.selType !== 'All' ",
+          "Rows": [
+            [{
+              "type": "info",
+              "label": "Basic types"
+            }],
+            [{
+                "key": "Input"
+              },
+              {
+                "type": "code",
+                "hideExpression": "model.hidecode",
+                "label": {
+                  "key": "Input"
+                }
+              }
+            ],
+            [{
+                "key": "date",
+                "label": "date",
+                "type": "date"
+              },
+              {
+                "type": "code",
+                "hideExpression": "model.hidecode",
+                "label": {
+                  "key": "date",
+                  "label": "date",
+                  "type": "date"
+                }
+              }
+            ],
+            [{
+                "key": "checkbox",
+                "label": "checkbox",
+                "type": "checkbox"
+              },
+              {
+                "type": "code",
+                "hideExpression": "model.hidecode",
+                "label": {
+                  "key": "checkbox",
+                  "label": "checkbox",
+                  "type": "checkbox"
+                }
+              }
+            ],
+            [{
+                "key": "radio",
+                "type": "radio",
+                "label": "hide code",
+                "options": [{
+                    "label": "show",
+                    "value": "false"
+                  },
+                  {
+                    "label": "hide",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "hideExpression": "model.hidecode",
+                "label": {
+                  "key": "radio",
+                  "type": "radio",
+                  "label": "hide code",
+                  "options": [{
+                      "label": "show",
+                      "value": "false"
+                    },
+                    {
+                      "label": "hide",
+                      "value": "true"
+                    }
+                  ]
+                }
+              }
+            ]
+
+          ]
+        },
+        {
+          "type": "form",
+          "hideExpression": "model.selType !=='expandable' && model.selType !== 'All'",
+          "Rows": [
+            [{
+              "type": "info",
+              "label": "expandable"
+            }],
+            [{
+              "key": "infff",
+              "type": "expandable",
+              "defaultValue": {
+                "header": {
+                  "type": "form",
+                  "Rows": [{
+                      "key": "Food",
+                      "label": "Food:",
+                      "type": "readonly",
+                      "className": "col-md-8",
+                      "defaultValue": "Beef"
+                    },
+                    {
+                      "key": "price",
+                      "label": "price:14.99",
+                      "type": "info",
+                      "className": "col-md-4"
+                    }
+                  ]
+                },
+                "detail": {
+                  "type": "form",
+                  "Rows": [
+                    [{
+                      "key": "detail"
+                    }]
+                  ]
+                }
+              }
+            }],
+            [{
+              "hideExpression": "model.hidecode",
+              "type": "code",
+              "label": {
+                "key": "infff",
+                "type": "expandable",
+                "defaultValue": {
+                  "header": {
+                    "type": "form",
+                    "Rows": [{
+                        "key": "Food",
+                        "label": "Food:",
+                        "type": "readonly",
+                        "className": "col-md-8",
+                        "defaultValue": "Beef"
+                      },
+                      {
+                        "key": "price",
+                        "label": "price:14.99",
+                        "type": "info",
+                        "className": "col-md-4"
+                      }
+                    ]
+                  },
+                  "detail": {
+                    "type": "form",
+                    "Rows": [
+                      [{
+                        "key": "detail"
+                      }]
+                    ]
+                  }
+                }
+              }
+            }]
+          ]
+        },
+        {
+          "type": "form",
+          "hideExpression": "model.selType !=='repeat' && model.selType !== 'All'",
+          "Rows": [
+            [{
+              "type": "info",
+              "label": "repeat"
+            }],
+            {
+              "key": "menu",
+              "model": [{
+                  "Food": "Spice Tuna Roll",
+                  "price": "4.99"
+                },
+                {
+                  "Food": "chicken",
+                  "price": "14.99"
+                }
+              ],
+              "type": "repeat",
+
+              "fieldArray": {
+                "Rows": [
+                  [{
+                      "key": "Food"
+                    },
+                    {
+                      "key": "price"
+                    },
+                    {
+                      "key": "Qty",
+                      "defaultValue": 1
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "code",
+              "hideExpression": "model.hidecode",
+              "label": {
+                "key": "menu",
+                "model": [{
+                    "Food": "Spice Tuna Roll",
+                    "price": "4.99"
+                  },
+                  {
+                    "Food": "chicken",
+                    "price": "14.99"
+                  }
+                ],
+                "type": "repeat",
+                "fieldArray": {
+                  "Rows": [
+                    [{
+                        "key": "Food"
+                      },
+                      {
+                        "key": "price"
+                      },
+                      {
+                        "key": "Qty",
+                        "defaultValue": 1
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pages",
+      "pages": [{
+          "type": "form",
+          "Rows": [
+            [{
+              "key": "selType",
+              "defaultValue": "headline"
+            }],
+            [{
+
+              "type": "code",
+              "hideExpression": "model.hidecode",
+              "label": {
+                "key": "selType",
+                "type": "select",
+                "label": "select Types",
+                "options": [{
+                    "label": "headline",
+                    "value": "headline"
+                  },
+                  {
+                    "label": "expandable",
+                    "value": "expandable"
+                  },
+                  {
+                    "label": "repeat",
+                    "value": "repeat"
+                  }
+                ],
+                "defaultValue": "headline"
+              }
+            }],
+            [{
+              "key": "hidecode",
+              "type": "checkbox",
+              "label": "hide code",
+              "defaultValue": "true"
+            }]
+          ]
+        },
+        {
+          "type": "form",
+          "className": "grid-item",
+          "Rows": [
+            [{
+              "key": "info",
+              "label": "Feed Back",
+              "type": "textarea"
+            }]
+          ]
+        }
+      ]
+    }
+  ]
+
+}

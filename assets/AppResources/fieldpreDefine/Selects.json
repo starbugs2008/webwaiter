@@ -1,0 +1,185 @@
+[{
+    "key": "genderCode",
+    "type": "select",
+    "templateOptions": {
+      "label": "Gender",
+      "options": [{
+          "label": "Male",
+          "value": "M"
+        },
+        {
+          "label": "Female",
+          "value": "F"
+        }
+      ]
+    }
+  },
+  {
+    "key": "Contact_Type",
+    "type": "select",
+    "templateOptions": {
+      "label": "Contact Type",
+      "options": [{
+          "label": "Phone",
+          "value": "Phone"
+        },
+        {
+          "label": "text",
+          "value": "text"
+        },
+        {
+          "label": "email",
+          "value": "email"
+        },
+        {
+          "label": "fax",
+          "value": "fax"
+        }
+      ]
+    }
+  },
+  {
+    "key": "languageId",
+    "type": "select",
+    "templateOptions": {
+      "label": "Language",
+      "options": [{
+          "value": 1,
+          "label": "American Sign Language"
+        },
+        {
+          "value": 10,
+          "label": "Gujarati"
+        },
+        {
+          "value": 11,
+          "label": "Hindi"
+        },
+        {
+          "value": 12,
+          "label": "Japanese"
+        },
+        {
+          "value": 13,
+          "label": "Korean"
+        },
+        {
+          "value": 14,
+          "label": "Portuguese"
+        },
+        {
+          "value": 15,
+          "label": "Russian"
+        },
+        {
+          "value": 16,
+          "label": "Spanish"
+        },
+        {
+          "value": 17,
+          "label": "Tamil"
+        },
+        {
+          "value": 18,
+          "label": "Telugu"
+        },
+        {
+          "value": 19,
+          "label": "Thai"
+        },
+        {
+          "value": 2,
+          "label": "Amharic"
+        },
+        {
+          "value": 20,
+          "label": "Tigrinya"
+        },
+        {
+          "value": 21,
+          "label": "Turkish"
+        },
+        {
+          "value": 22,
+          "label": "Twi"
+        },
+        {
+          "value": 23,
+          "label": "Urdu"
+        },
+        {
+          "value": 24,
+          "label": "Vietnamese"
+        },
+        {
+          "value": 25,
+          "label": "Other"
+        },
+        {
+          "value": 26,
+          "label": "English"
+        },
+        {
+          "value": 3,
+          "label": "Aribic"
+        },
+        {
+          "value": 4,
+          "label": "Bangla"
+        },
+        {
+          "value": 5,
+          "label": "Bengali"
+        },
+        {
+          "value": 6,
+          "label": "Chinese"
+        },
+        {
+          "value": 7,
+          "label": "Ethiopian"
+        },
+        {
+          "value": 8,
+          "label": "Farsi"
+        },
+        {
+          "value": 9,
+          "label": "French"
+        }
+      ]
+    }
+  },
+  {
+    "key": "selType",
+    "type": "select",
+    "templateOptions": {
+      "label": "select Types",
+      "options": [{
+          "label": "headline",
+          "value": "headline"
+        },
+        {
+          "label": "basic",
+          "value": "basic"
+        },
+        {
+          "label": "table",
+          "value": "table"
+        },
+        {
+          "label": "expandable",
+          "value": "expandable"
+        },
+        {
+          "label": "repeat",
+          "value": "repeat"
+        },
+        {
+          "label": "show all",
+          "value": "All"
+        }
+      ]
+    }
+  }
+]

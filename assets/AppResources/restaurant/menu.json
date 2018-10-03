@@ -1,0 +1,214 @@
+{
+  "caseID": "menu",
+  "group": [
+    {
+      "type": "pages",
+      "pages": [
+        {
+          "type": "form",
+          "Rows": [
+            [
+              {
+                "type": "info",
+                "label": "headline"
+              }
+            ],
+            [
+              {
+                "key": "info",
+                "label": " Types Examples",
+                "type": "info",
+                "className": "headline"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "form",
+          "Rows": [
+            [
+              {
+                "type": "info",
+                "label": "expandable"
+              }
+            ],
+            [
+              {
+                "key": "infff",
+                "type": "expandable",
+                "defaultValue": {
+                  "header": {
+                    "type": "form",
+                    "Rows": [
+                      {
+                        "key": "Food",
+                        "label": "Food:",
+                        "type": "readonly",
+                        "className": "col-md-8",
+                        "defaultValue":"Beef"
+                      },
+                      {
+                        "key": "price",
+                        "label": "price:14.99",
+                        "type": "info",
+                        "className": "col-md-4"
+                      }
+                    ]
+                  },
+                  "detail": {
+                    "type": "form",
+                    "Rows": [
+                      [
+                        {
+                          "key": "detail"
+                        }
+                      ]
+                    ]
+                  }
+                }
+              }
+            ]
+          ]
+        },
+        {
+          "type": "form",
+          "Rows": [
+            [
+              {
+                "type": "info",
+                "label": "repeat"
+              }
+            ],
+            {
+              "key": "menu",
+              "model": [
+                {
+                  "Food": "Spice Tuna Roll",
+                  "price": "4.99"
+                },
+                {
+                  "Food": "chicken",
+                  "price": "14.99"
+                }
+              ],
+              "type": "repeat",
+              "fieldArray": {
+                "Rows": [
+                  [
+                    {
+                      "key": "Food"
+                    },
+                    {
+                      "key": "price"
+                    },
+                    {
+                      "key": "Qty",
+                      "defaultValue":1
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "Rows": [
+            [
+              {
+                "type": "info",
+                "label": "FieldArray"
+              }
+            ],
+            {
+              "key": "menu",
+              "model": [
+                {
+                  "Food": "Spice Tuna Roll",
+                  "price": "4.99"
+                },
+                {
+                  "Food": "chicken",
+                  "price": "14.99"
+                }
+              ],
+              "type": "FieldArray",
+              "fieldArray": {
+                "fieldGroupClassName": "grid-container",
+                "template": {
+                  "type": "form",
+                  "Rows": [
+                    {
+                      "type": "expandable",
+                      "header": {
+                        "type": "form",
+                        "Rows": [
+                          {
+                            "key": "Food",
+                            "label": "Food:",
+                            "type": "readonly",
+                            "className": "col-md-8"
+                          },
+                          {
+                            "key": "price",
+                            "label": "price:",
+                            "type": "readonly",
+                            "className": "col-md-4"
+                          }
+                        ]
+                      },
+                      "detail": {
+                        "type": "form",
+                        "Rows": [
+                          [
+                            {
+                              "key": "detail"
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "Rows": [
+                  [
+                    {
+                      "key": "m",
+                      "type": "info"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "className": "grid-item",
+      "Rows": [
+        [
+          {
+            "type": "info",
+            "label": "pagetitle"
+          }
+        ],
+        {
+          "className": " ",
+          "Rows": [
+            [
+              {
+                "key": "info",
+                "label": "My Order",
+                "type": "info",
+                "className": "pagetitle"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "pages": []
+}

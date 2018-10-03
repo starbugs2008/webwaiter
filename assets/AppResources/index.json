@@ -4,6 +4,12 @@
     "datapath": "/assets/data/",
     "libpath": "/assets/AppResources/"
   },
+  "Libs": {
+    "fieldGroup": ["lib_address.json", "lib_title.json"],
+    "fieldpreDefine": ["Selects.json"],
+    "actionLib": ["lib_action.json"],
+    "ErrorMessages": ["Validation.json"]
+  },
   "Resources": {
     "defaultDomin": [
       "public",
@@ -18,7 +24,17 @@
       }
     ],
     "public": [
-     
+      {
+        "caseID": "fieldtypes",
+        "paths": {
+          "uiDefPath": "fieldtypes.json"
+        },
+        "menu": {
+          "label": "field types",
+          "level": "level0",
+          "path": "public/fieldtypes"
+        }
+      },
       {
         "caseID": "login",
         "paths": {
@@ -32,71 +48,16 @@
       },
       {
         "caseID": "loginfail",
-        "ui": "public/loginfail.json"
-      }
-    ],
-    "forms": [
-      {
-        "caseID": "Appointment",
         "paths": {
-          "uiDefPath": "Appointment.json"
-        },
-        "menu": {
-          "label": "Appointment Form",
-          "level": "level1",
-          "path": "forms/Appointment"
-        }
-      },
-      {
-        "caseID": "email",
-        "paths": {
-          "uiDefPath": "email.json"
-        },
-        "menu": {
-          "label": "Send Email",
-          "level": "level1",
-          "path": "forms/email"
-        }
-      },
-      {
-        "caseID": "contact",
-        "paths": {
-          "uiDefPath": "contact.json"
-        },
-        "menu": {
-          "label": "contact",
-          "path": "forms/contact",
-          "level": ""
-        }
-      },
-      {
-        "caseID": "order",
-        "paths": {
-          "uiDefPath": "order.json"
-        },
-        "menu": {
-          "label": "order form",
-          "path": "forms/order",
-          "level": ""
-        }
-      },
-      {
-        "caseID": "tabform",
-        "paths": {
-          "uiDefPath": "tabform.json"
-        },
-        "menu": {
-          "label": "tabforms",
-          "path": "forms/tabform",
-          "level": ""
+          "uiDefPath": "loginfail.json"
         }
       }
     ],
     "restaurant":[
       {
-        "caseID": "restaurantmenu",
+        "caseID": "menu",
         "paths": {
-          "uiDefPath": "restaurantmenu.json"
+          "uiDefPath": "menu.json"
         },
         "menu": {
           "label": "Restaurantmenu Menu",
@@ -122,7 +83,9 @@
           "uiDefPath": "fish.json"
         }
       }
-      
+    ],
+    "admin":[
+
     ]
   }
 }

@@ -2,8 +2,12 @@
   "caseID": "Login",
   "actions": [
     {
-      "id": "submit",
-      "label": "Submit"
+      "id": "login",
+      "label": "Submit",
+      "redirect": {
+        "success": "forms/Appointment",
+        "fail": "public/loginfail"
+      }
     }
   ],
   "pages": [
@@ -25,7 +29,7 @@
       "Rows": [
         [
           {
-            "key": "UserID",
+            "key": "username",
             "label": "User ID"
           },
           {
