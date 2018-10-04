@@ -2322,6 +2322,7 @@ var FieldService = /** @class */ (function () {
     function FieldService(validation, indexservice) {
         this.indexservice = indexservice;
         this.validator = { validation: validation };
+        console.log(this.validator);
     }
     FieldService.prototype.Create = function (cell, rowLength) {
         try {
