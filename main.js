@@ -17,425 +17,6 @@ var FIELD_VALIDATION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injection
 
 /***/ }),
 
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.css":
-/*!*****************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.css ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".grid-container {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 1fr 120px ;\r\n        grid-template-columns: 1fr 120px ;\r\n    padding: 10px;\r\n  }\r\n  .grid-item {\r\n    background-color: rgba(255, 255, 255, 0.8);\r\n    border: 1px solid rgba(0, 0, 0, 0.8);\r\n    padding: 20px;\r\n    font-size: 30px;\r\n    text-align: center;\r\n  }"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.html":
-/*!******************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.html ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"grid-container\">\n  <div *ngFor=\"let page of group  let i = index\" [class]='page.className'>\n    <json-page [page]='page'></json-page>\n  </div>\n</div>\n<br/>\n"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.ts":
-/*!****************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.ts ***!
-  \****************************************************************************************/
-/*! exports provided: GroupComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GroupComponent", function() { return GroupComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var GroupComponent = /** @class */ (function () {
-    function GroupComponent() {
-    }
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Object)
-    ], GroupComponent.prototype, "group", void 0);
-    GroupComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "json-group",
-            template: __webpack_require__(/*! ./group.component.html */ "./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.html"),
-            styles: [__webpack_require__(/*! ./group.component.css */ "./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.css")]
-        })
-    ], GroupComponent);
-    return GroupComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.html":
-/*!***************************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.html ***!
-  \***************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf='display' [class]='className'>\r\n  <form [formGroup]=\"form\">\r\n    <formly-form [model]=\"model\" [fields]=\"fields\" [form]=\"form\"></formly-form>\r\n  <ng-content></ng-content>\r\n  <json-actions [actions]='formData.actions'></json-actions>\r\n  </form>\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.scss":
-/*!***************************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.scss ***!
-  \***************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "form {\n  margin: 10px; }\n\ntextarea {\n  width: 100%; }\n\n.formboarder {\n  border: 1px solid #999999 !important;\n  margin: 5px 0; }\n\nb {\n  padding: 5px; }\n\n.level1 {\n  margin-left: 450px;\n  padding-left: 450px;\n  background-color: red;\n  font-weight: 100;\n  font-size: 8pt; }\n"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.ts":
-/*!*************************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.ts ***!
-  \*************************************************************************************************/
-/*! exports provided: FormComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormComponent", function() { return FormComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../services */ "./projects/jsonformlib/src/lib/services/index.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var FormComponent = /** @class */ (function () {
-    function FormComponent(formService, appIndex, service) {
-        this.formService = formService;
-        this.appIndex = appIndex;
-        this.service = service;
-        this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({});
-        this.btclick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-    }
-    Object.defineProperty(FormComponent.prototype, "className", {
-        get: function () {
-            return this.formData.className || 'formboarder';
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FormComponent.prototype, "display", {
-        get: function () {
-            return this.service.display(this.formData);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    FormComponent.prototype.sampleformcontrol = function () {
-        var _this = this;
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["timer"])(0, 10000)
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(3))
-            .subscribe(function (val) {
-            var x = _this.fields ? _this.fields[0] : {};
-            x = x.fieldGroup || [];
-            x.forEach(function (element) {
-                console.log(element.key, "required=", element.templateOptions.required);
-                if (element.formControl) {
-                    console.log("valid =", element.formControl.valid);
-                }
-            });
-        });
-    };
-    FormComponent.prototype.ngOnChanges = function (change) {
-        var _this = this;
-        this.model = this.service.CurrentModel;
-        if (this.formData) {
-            if (this.appIndex.Libs$) {
-                this.appIndex.Libs$.subscribe(function (c) {
-                    _this.appIndex.Libs = c;
-                    _this.fields = _this.formService.RowsMaptoFields(_this.formData.Rows, _this.model, _this.appIndex.getLib("fieldGroup"), _this.appIndex.getLib("fieldpreDefine"));
-                }, function (e) {
-                    console.log(e);
-                });
-            }
-            else {
-                this.fields = this.formService.RowsMaptoFields(this.formData.Rows, this.model, null, null);
-            }
-        }
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Object)
-    ], FormComponent.prototype, "formData", void 0);
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"])
-    ], FormComponent.prototype, "form", void 0);
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
-        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
-    ], FormComponent.prototype, "btclick", void 0);
-    FormComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "json-form",
-            template: __webpack_require__(/*! ./form.component.html */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.html"),
-            styles: [__webpack_require__(/*! ./form.component.scss */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_4__["FormService"],
-            _services__WEBPACK_IMPORTED_MODULE_4__["AppIndexService"],
-            _services__WEBPACK_IMPORTED_MODULE_4__["PageService"]])
-    ], FormComponent);
-    return FormComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.css":
-/*!*********************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.css ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.html":
-/*!**********************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.html ***!
-  \**********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<span *ngIf=\"service.display(page)\">\r\n  <div [ngSwitch]=\"page.type\">\r\n    <div *ngSwitchCase=\"SupportTypes.pages\">\r\n      <json-pages [pages]='page'>\r\n      </json-pages>\r\n    </div>\r\n    <div *ngSwitchCase=\"SupportTypes.Form\">\r\n      <json-form [formData]='page'>\r\n      </json-form>\r\n    </div>\r\n    <div *ngSwitchCase=\"SupportTypes.tabgroup\">\r\n      <json-tabs-section [sections]='page.sections'></json-tabs-section>\r\n    </div>\r\n    <div *ngSwitchDefault>\r\n      <div class=\"alert alert-dange\">\r\n        The \"{{page.type}}\" is not supported\r\n      </div>\r\n      <div>It only supports <b>{{ElementTypes}} </b></div>\r\n      <br />\r\n      Page Define {{page | json}}\r\n    </div>\r\n  </div>\r\n\r\n</span>"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.ts":
-/*!********************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.ts ***!
-  \********************************************************************************************/
-/*! exports provided: supports, PageComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "supports", function() { return supports; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageComponent", function() { return PageComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services */ "./projects/jsonformlib/src/lib/services/index.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var supports = {
-    Form: "form",
-    tabgroup: "tabgroup",
-    pages: "pages"
-};
-var PageComponent = /** @class */ (function () {
-    function PageComponent(service) {
-        this.service = service;
-        this.SupportTypes = supports;
-    }
-    Object.defineProperty(PageComponent.prototype, "ElementTypes", {
-        get: function () {
-            var x = JSON.stringify(Object.values(this.SupportTypes));
-            return x
-                .replace(/"/g, "")
-                .replace("[", "")
-                .replace("]", "");
-        },
-        enumerable: true,
-        configurable: true
-    });
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Object)
-    ], PageComponent.prototype, "page", void 0);
-    PageComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "json-page",
-            template: __webpack_require__(/*! ./page.component.html */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.html"),
-            styles: [__webpack_require__(/*! ./page.component.css */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.css")]
-        }),
-        __metadata("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_1__["PageService"]])
-    ], PageComponent);
-    return PageComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.css":
-/*!******************************************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.css ***!
-  \******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/deep/ .mat-tab-label{\r\n    color:white;\r\n    font-weight: 700;\r\n    background-color: #6b1c89;\r\n    font-size: 14px;\r\n    margin: 2px;\r\n}\r\n/deep/.mat-tab-label-active {\r\n    background-color:#17527c !important;\r\n} "
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.html":
-/*!*******************************************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.html ***!
-  \*******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<mat-tab-group>\n    <mat-tab *ngFor=\"let section of sections; let index = index;\" [label]='section.title' class='tabColor'>\n         <json-pages [pages]='section'></json-pages> \n        <!-- <json-actions [actions]='section.actions'></json-actions> -->\n    </mat-tab>\n</mat-tab-group>"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.ts":
-/*!*****************************************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.ts ***!
-  \*****************************************************************************************************************/
-/*! exports provided: TabsSectionComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsSectionComponent", function() { return TabsSectionComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TabsSectionComponent = /** @class */ (function () {
-    function TabsSectionComponent() {
-    }
-    TabsSectionComponent.prototype.ngOnChanges = function () {
-    };
-    TabsSectionComponent.prototype.formAction = function (event) {
-        console.log("eventcls:", event);
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Array)
-    ], TabsSectionComponent.prototype, "sections", void 0);
-    TabsSectionComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "json-tabs-section",
-            template: __webpack_require__(/*! ./tabs-section.component.html */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.html"),
-            styles: [__webpack_require__(/*! ./tabs-section.component.css */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], TabsSectionComponent);
-    return TabsSectionComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.css":
-/*!*****************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.css ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\r\n.bold {\r\n  font-weight: 800;\r\n}\r\n\r\n"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.html":
-/*!******************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.html ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngFor=\"let page of pages.pages  let i = index\" [class]='page.className'>\r\n <json-page [page]= 'page'></json-page>\r\n</div>\r\n\r\n<json-actions [actions]='pages.actions'></json-actions>"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.ts":
-/*!****************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.ts ***!
-  \****************************************************************************************/
-/*! exports provided: PagesComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PagesComponent", function() { return PagesComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var PagesComponent = /** @class */ (function () {
-    function PagesComponent() {
-    }
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Array)
-    ], PagesComponent.prototype, "pages", void 0);
-    PagesComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "json-pages",
-            template: __webpack_require__(/*! ./pages.component.html */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.html"),
-            styles: [__webpack_require__(/*! ./pages.component.css */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], PagesComponent);
-    return PagesComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./projects/jsonformlib/src/lib/components/actions/actions.component.css":
 /*!*******************************************************************************!*\
   !*** ./projects/jsonformlib/src/lib/components/actions/actions.component.css ***!
@@ -541,7 +122,7 @@ var ActionsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<ng-container *ngIf=\"defCase; then page; else nopage\">\r\n</ng-container>\r\n<ng-template #nopage>\r\n  <div>\r\n    page is not set up\r\n  </div>\r\n</ng-template>\r\n<ng-template #page>\r\n   <json-pages [pages]='defCase'></json-pages>\r\n   <json-group [group]='defCase.group'></json-group>\r\n</ng-template> "
+module.exports = "<ng-container *ngIf=\"defCase; then page; else nopage\">\r\n</ng-container>\r\n<ng-template #nopage>\r\n  <div>\r\n    page is not set up\r\n  </div>\r\n</ng-template>\r\n<ng-template #page>\r\n  <div *ngFor=\"let page of defCase.pages  let i = index\" [class]='page.className'>\r\n    <json-page [page]='page'></json-page>\r\n  </div>\r\n  <div [class]='defCase.groupClass'>\r\n    <div *ngFor=\"let page of defCase.group  let i = index\" [class]='page.className'>\r\n      <json-page [page]='page'></json-page>\r\n    </div>\r\n  </div>\r\n</ng-template>"
 
 /***/ }),
 
@@ -591,11 +172,13 @@ var CaseComponent = /** @class */ (function () {
             _this.pageService.CurrentPage = null;
             if (url.length > 1) {
                 _this.pageService.LoadCase(url[0].path, url[1].path).subscribe(function (c) {
-                    _this.pageService.CurrentPage = {
-                        defCase: c[0],
-                        model: c[1],
-                        src: "CaseComponent"
-                    };
+                    if (c[0]) {
+                        _this.pageService.CurrentPage = {
+                            defCase: c[0],
+                            model: c[1],
+                            src: "CaseComponent"
+                        };
+                    }
                 });
             }
         });
@@ -620,6 +203,173 @@ var CaseComponent = /** @class */ (function () {
     ], CaseComponent);
     return CaseComponent;
 }());
+
+
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.html":
+/*!***************************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.html ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div [class]=\"field.fieldArray.fieldGroupClassName\">\r\n    <div *ngFor=\"let m of model ; let i = index;\" class=\"row\">\r\n        <div *ngFor=\"let group of field.fieldGroup[i].fieldGroup \">\r\n            {{m |json}}\r\n            <formly-group [model]=\"m\" [field]=\"group\" [options]=\"options\" [form]=\"formControl\">\r\n            </formly-group>\r\n        </div>\r\n    </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.scss":
+/*!***************************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.scss ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".grid-container {\n  font-size: 12px;\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 1fr 1fr;\n      grid-template-columns: 1fr 1fr; }\n"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.ts":
+/*!*************************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.ts ***!
+  \*************************************************************************************************/
+/*! exports provided: MyFieldArrayFieldtype */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyFieldArrayFieldtype", function() { return MyFieldArrayFieldtype; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngx-formly/core */ "./node_modules/@ngx-formly/core/fesm5/ngx-formly-core.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MyFieldArrayFieldtype = /** @class */ (function (_super) {
+    __extends(MyFieldArrayFieldtype, _super);
+    function MyFieldArrayFieldtype(builder, store) {
+        var _this = _super.call(this, builder) || this;
+        _this.store = store;
+        return _this;
+        // this.store.select(s => s.button).subscribe((c: BTState) => {
+        //   switch (c.id) {
+        //     case "myorder":
+        //       c.model["Food"] = c.model.title;
+        //       c.model["Qty"] = 1;
+        //       this.add(this.model.length, c.model);
+        //       break;
+        //   }
+        // });
+    }
+    MyFieldArrayFieldtype.prototype.ngOnChanges = function (change) {
+        console.log(change);
+    };
+    MyFieldArrayFieldtype = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./MyFieldArray.fieldtype.html */ "./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.html"),
+            styles: [__webpack_require__(/*! ./MyFieldArray.fieldtype.scss */ "./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.scss")]
+        }),
+        __metadata("design:paramtypes", [_ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__["FormlyFormBuilder"], _ngrx_store__WEBPACK_IMPORTED_MODULE_2__["Store"]])
+    ], MyFieldArrayFieldtype);
+    return MyFieldArrayFieldtype;
+}(_ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__["FieldArrayType"]));
+
+
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.html":
+/*!*************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<pre><code>{{Code}}</code></pre>"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.scss":
+/*!*************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.scss ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.ts":
+/*!***********************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.ts ***!
+  \***********************************************************************************/
+/*! exports provided: CodeFieldType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeFieldType", function() { return CodeFieldType; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngx-formly/core */ "./node_modules/@ngx-formly/core/fesm5/ngx-formly-core.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var CodeFieldType = /** @class */ (function (_super) {
+    __extends(CodeFieldType, _super);
+    function CodeFieldType() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(CodeFieldType.prototype, "Code", {
+        get: function () {
+            return JSON.stringify(this.field.templateOptions.label, null, 2);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    CodeFieldType = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./code.fieldtype.html */ "./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.html"),
+            styles: [__webpack_require__(/*! ./code.fieldtype.scss */ "./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.scss")]
+        })
+    ], CodeFieldType);
+    return CodeFieldType;
+}(_ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__["FieldType"]));
 
 
 
@@ -828,8 +578,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _readonly_readonly_fieldtype__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./readonly/readonly.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/readonly/readonly.fieldtype.ts");
 /* harmony import */ var _menu_menu_fieldtype__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu/menu.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/menu/menu.fieldtype.ts");
 /* harmony import */ var _title_title_fieldtype__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./title/title.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/title/title.fieldtype.ts");
-/* harmony import */ var _mattable_mattable_fieldtype__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mattable/mattable.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.ts");
-/* harmony import */ var _expandable_expandable_fieldtype__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./expandable/expandable.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/expandable/expandable.fieldtype.ts");
+/* harmony import */ var _expandable_expandable_fieldtype__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./expandable/expandable.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/expandable/expandable.fieldtype.ts");
+/* harmony import */ var _FieldArray_MyFieldArray_fieldtype__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FieldArray/MyFieldArray.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/FieldArray/MyFieldArray.fieldtype.ts");
+/* harmony import */ var _code_code_fieldtype__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./code/code.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/code/code.fieldtype.ts");
+/* harmony import */ var _table_table_fieldtype__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./table/table.fieldtype */ "./projects/jsonformlib/src/lib/components/fieldtypes/table/table.fieldtype.ts");
+
+
 
 
 
@@ -840,17 +594,23 @@ __webpack_require__.r(__webpack_exports__);
 var field_types = [
     _html_html_fieldtype__WEBPACK_IMPORTED_MODULE_0__["HtmlFieldType"],
     _repeat_repeat_fieldtype__WEBPACK_IMPORTED_MODULE_1__["RepeatFieldType"],
-    _expandable_expandable_fieldtype__WEBPACK_IMPORTED_MODULE_6__["ExpandableFieldType"],
+    _expandable_expandable_fieldtype__WEBPACK_IMPORTED_MODULE_5__["ExpandableFieldType"],
     _readonly_readonly_fieldtype__WEBPACK_IMPORTED_MODULE_2__["ReadOnlyFieldType"],
     _title_title_fieldtype__WEBPACK_IMPORTED_MODULE_4__["TitleFieldType"],
     _menu_menu_fieldtype__WEBPACK_IMPORTED_MODULE_3__["MenuFieldType"],
-    _mattable_mattable_fieldtype__WEBPACK_IMPORTED_MODULE_5__["MattableFieldType"]
+    _FieldArray_MyFieldArray_fieldtype__WEBPACK_IMPORTED_MODULE_6__["MyFieldArrayFieldtype"],
+    _code_code_fieldtype__WEBPACK_IMPORTED_MODULE_7__["CodeFieldType"],
+    _table_table_fieldtype__WEBPACK_IMPORTED_MODULE_8__["TableFieldType"]
 ];
 var FIELD_TYPES = [
     { name: "repeat", component: _repeat_repeat_fieldtype__WEBPACK_IMPORTED_MODULE_1__["RepeatFieldType"] },
     {
         name: "expandable",
-        component: _expandable_expandable_fieldtype__WEBPACK_IMPORTED_MODULE_6__["ExpandableFieldType"]
+        component: _expandable_expandable_fieldtype__WEBPACK_IMPORTED_MODULE_5__["ExpandableFieldType"]
+    },
+    {
+        name: "FieldArray",
+        component: _FieldArray_MyFieldArray_fieldtype__WEBPACK_IMPORTED_MODULE_6__["MyFieldArrayFieldtype"]
     },
     {
         name: "readonly",
@@ -867,131 +627,20 @@ var FIELD_TYPES = [
     {
         name: "headline",
         component: _title_title_fieldtype__WEBPACK_IMPORTED_MODULE_4__["TitleFieldType"]
+    },
+    {
+        name: "code",
+        component: _code_code_fieldtype__WEBPACK_IMPORTED_MODULE_7__["CodeFieldType"]
+    },
+    {
+        name: "table",
+        component: _table_table_fieldtype__WEBPACK_IMPORTED_MODULE_8__["TableFieldType"]
+    },
+    {
+        name: "menu",
+        component: _menu_menu_fieldtype__WEBPACK_IMPORTED_MODULE_3__["MenuFieldType"]
     }
 ];
-
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.html":
-/*!*********************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.html ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf='data'>\n  <table mat-table #table [dataSource]=\"dataSource\">\n    <ng-container *ngFor='let head of columnsDef' [matColumnDef]=\"head\">\n      <mat-header-cell *matHeaderCellDef> {{head}} </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\">\n        <span [ngSwitch]=\"headtype(head)\">\n          <p *ngSwitchCase=\"'action'\">\n            <button class=\"btn btn-primary\">{{head}}</button>\n          </p>\n          <p *ngSwitchDefault>\n            {{element[head]}}\n          </p>\n        </span>\n      </mat-cell>\n    </ng-container>\n    <mat-header-row *matHeaderRowDef=\"columnsDef\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: columnsDef;\" \n    (click)=\"selectRow(row) \"\n    [style.background]=\"highlightedRows.indexOf(row) != -1 ? 'lightblue' : ''\"></mat-row>\n  </table>\n  <ng-container *ngFor='let a of actions'>\n    <button class=\"btn btn-primary\">{{a}}</button>\n  </ng-container>\n</div>"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.scss":
-/*!*********************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.scss ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".mat-row {\n  min-height: 65px; }\n  .mat-row.selected {\n    background: #dddddd; }\n  .code {\n  margin: 10px; }\n  .example-container {\n  margin: 40px;\n  background: beige; }\n  table {\n  width: 100%; }\n  .mat-row:hover {\n  background-color: lightgray; }\n"
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.ts":
-/*!*******************************************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.ts ***!
-  \*******************************************************************************************/
-/*! exports provided: MattableFieldType */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MattableFieldType", function() { return MattableFieldType; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
-/* harmony import */ var _services_page_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/page.service */ "./projects/jsonformlib/src/lib/services/page.service.ts");
-/* harmony import */ var _ngrxcore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../ngrxcore */ "./projects/jsonformlib/src/lib/ngrxcore/index.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var MattableFieldType = /** @class */ (function () {
-    function MattableFieldType(store, service) {
-        this.store = store;
-        this.service = service;
-        this.highlightedRows = [];
-    }
-    MattableFieldType.prototype.ngOnChanges = function (changes) {
-        this.model = this.service.CurrentModel;
-        var x = this.model[this.data.id];
-        if (x) {
-            this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](x);
-        }
-    };
-    MattableFieldType.prototype.headtype = function (label) {
-        var x = this.data.columns.find(function (c) { return c.label === label; }).type;
-        return x;
-    };
-    Object.defineProperty(MattableFieldType.prototype, "columnsDef", {
-        get: function () {
-            return this.data ? this.data.columns.map(function (c) { return c.label; }) : [];
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(MattableFieldType.prototype, "actions", {
-        get: function () {
-            return this.data ? this.data.actions : [];
-        },
-        enumerable: true,
-        configurable: true
-    });
-    MattableFieldType.prototype.selectRow = function (row) {
-        var action = null;
-        if (this.data.redirect) {
-            action = new _ngrxcore__WEBPACK_IMPORTED_MODULE_4__["BTAction"]({
-                action: { id: this.data.id, redirect: this.data.redirect },
-                model: row
-            });
-            this.store.dispatch(action);
-        }
-        switch (this.data.selected) {
-            case "single":
-                this.highlightedRows[0] = row;
-                break;
-            default:
-                if (this.highlightedRows.indexOf(row) === -1) {
-                    this.highlightedRows.push(row);
-                }
-                else {
-                    // this.highlightedRows.slice()
-                }
-                break;
-        }
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Object)
-    ], MattableFieldType.prototype, "data", void 0);
-    MattableFieldType = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./mattable.fieldtype.html */ "./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.html"),
-            styles: [__webpack_require__(/*! ./mattable.fieldtype.scss */ "./projects/jsonformlib/src/lib/components/fieldtypes/mattable/mattable.fieldtype.scss")]
-        }),
-        __metadata("design:paramtypes", [_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["Store"], _services_page_service__WEBPACK_IMPORTED_MODULE_3__["PageService"]])
-    ], MattableFieldType);
-    return MattableFieldType;
-}());
-
 
 
 /***/ }),
@@ -1014,7 +663,7 @@ module.exports = ".level1 {\r\n  padding-left: 10px;\r\n  font-weight: 500;\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let link of this.service.Menus$ |async\">\n  <div mat-list-item>\n    <a [routerLink]=\"[link.path]\" routerLinkActive=\"active-link\" *ngIf='link'>\n      <span [class]='link.level' *ngIf='link'> {{link.label}} </span>\n    </a>\n    <i class=\"fas fa-edit\" (click)='onedit(link.path)' *ngIf=\"service.appIndex.FormBuilder\"></i>\n  </div>\n</div>"
+module.exports = "<div *ngFor=\"let link of this.service.Menus$ |async\">\r\n  <div mat-list-item>\r\n    <a [routerLink]=\"[link.path]\" routerLinkActive=\"active-link\" *ngIf='link'>\r\n      <span [class]='link.level' *ngIf='link'> {{link.label}} </span>\r\n    </a>\r\n    <i class=\"fas fa-edit\" (click)='onedit(link.path)' *ngIf=\"service.appIndex.FormBuilder\"></i>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1067,6 +716,13 @@ var MenuFieldType = /** @class */ (function (_super) {
     MenuFieldType.prototype.onedit = function (path) {
         this.router.navigate([this.service.appIndex.FormBuilder, path]);
     };
+    Object.defineProperty(MenuFieldType.prototype, "Menu$", {
+        get: function () {
+            return this.service.Menus$;
+        },
+        enumerable: true,
+        configurable: true
+    });
     MenuFieldType = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "json-menu",
@@ -1230,6 +886,92 @@ var RepeatFieldType = /** @class */ (function (_super) {
 
 /***/ }),
 
+/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/table/table.fieldtype.html":
+/*!***************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/table/table.fieldtype.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div *ngFor=\"let header of headers \" class=\"col-md-2\">\r\n       <div class='formtitle'> {{header}}</div>\r\n    </div>\r\n</div>\r\n\r\n<div *ngFor=\"let m of model ; let i = index;\" class=\"row\">\r\n    <div *ngFor=\"let header of headers\"class=\"col-md-2\">\r\n        {{m[header]}}\r\n    </div>\r\n    <json-actions [actions]=' field.fieldGroup.actions'></json-actions>\r\n</div>\r\n<hr />"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/fieldtypes/table/table.fieldtype.ts":
+/*!*************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/fieldtypes/table/table.fieldtype.ts ***!
+  \*************************************************************************************/
+/*! exports provided: TableFieldType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableFieldType", function() { return TableFieldType; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngx-formly/core */ "./node_modules/@ngx-formly/core/fesm5/ngx-formly-core.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var TableFieldType = /** @class */ (function (_super) {
+    __extends(TableFieldType, _super);
+    function TableFieldType(builder, store) {
+        var _this = _super.call(this, builder) || this;
+        _this.store = store;
+        _this.store.select(function (s) { return s.button; }).subscribe(function (c) {
+            switch (c.id) {
+                case "myorder":
+                    c.model["Food"] = c.model.title;
+                    c.model["Qty"] = 1;
+                    _this.add(_this.model.length, c.model);
+                    break;
+            }
+        });
+        return _this;
+    }
+    TableFieldType.prototype.ngOnChanges = function (change) {
+        console.log(change);
+    };
+    Object.defineProperty(TableFieldType.prototype, "headers", {
+        get: function () {
+            var x = this.field.fieldGroup[0];
+            return x.Rows[0].map(function (c) { return c.label; });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    TableFieldType = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./table.fieldtype.html */ "./projects/jsonformlib/src/lib/components/fieldtypes/table/table.fieldtype.html")
+        }),
+        __metadata("design:paramtypes", [_ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__["FormlyFormBuilder"], _ngrx_store__WEBPACK_IMPORTED_MODULE_2__["Store"]])
+    ], TableFieldType);
+    return TableFieldType;
+}(_ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__["FieldArrayType"]));
+
+
+
+/***/ }),
+
 /***/ "./projects/jsonformlib/src/lib/components/fieldtypes/title/title.fieldtype.css":
 /*!**************************************************************************************!*\
   !*** ./projects/jsonformlib/src/lib/components/fieldtypes/title/title.fieldtype.css ***!
@@ -1248,7 +990,7 @@ module.exports = "mat-toolbar {\r\n  flex: 1 1 auto;\r\n  justify-content: cente
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [ngSwitch]=\"field.type\">\n    <div *ngSwitchCase=\"'headline'\">\n      <mat-toolbar>{{field.templateOptions.label}}</mat-toolbar>\n    </div>\n    <div *ngSwitchDefault >\n    {{field.templateOptions.label}}\n    </div>\n  </div>"
+module.exports = "<div [class]='field.className'>{{field.templateOptions.label}}</div>"
 
 /***/ }),
 
@@ -1310,14 +1052,12 @@ var TitleFieldType = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-/* harmony import */ var _FormOrginazer_pages_page_form_form_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormOrginazer/pages/page/form/form.component */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/form/form.component.ts");
+/* harmony import */ var _pages_page_form_form_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/page/form/form.component */ "./projects/jsonformlib/src/lib/components/pages/page/form/form.component.ts");
 /* harmony import */ var _actions_actions_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions/actions.component */ "./projects/jsonformlib/src/lib/components/actions/actions.component.ts");
-/* harmony import */ var _FormOrginazer_pages_page_tabs_section_tabs_section_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormOrginazer/pages/page/tabs-section/tabs-section.component */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/tabs-section/tabs-section.component.ts");
+/* harmony import */ var _pages_page_tabs_section_tabs_section_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/page/tabs-section/tabs-section.component */ "./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.ts");
 /* harmony import */ var _case_case_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./case/case.component */ "./projects/jsonformlib/src/lib/components/case/case.component.ts");
-/* harmony import */ var _FormOrginazer_pages_page_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormOrginazer/pages/page/page.component */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/page/page.component.ts");
-/* harmony import */ var _FormOrginazer_pages_pages_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormOrginazer/pages/pages.component */ "./projects/jsonformlib/src/lib/components/FormOrginazer/pages/pages.component.ts");
-/* harmony import */ var _FormOrginazer_group_group_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormOrginazer/group/group.component */ "./projects/jsonformlib/src/lib/components/FormOrginazer/group/group.component.ts");
-
+/* harmony import */ var _pages_page_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/page/page.component */ "./projects/jsonformlib/src/lib/components/pages/page/page.component.ts");
+/* harmony import */ var _pages_pages_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/pages.component */ "./projects/jsonformlib/src/lib/components/pages/pages.component.ts");
 
 
 
@@ -1325,14 +1065,338 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var components = [
-    _FormOrginazer_pages_page_form_form_component__WEBPACK_IMPORTED_MODULE_0__["FormComponent"],
+    _pages_page_form_form_component__WEBPACK_IMPORTED_MODULE_0__["FormComponent"],
     _actions_actions_component__WEBPACK_IMPORTED_MODULE_1__["ActionsComponent"],
-    _FormOrginazer_pages_page_tabs_section_tabs_section_component__WEBPACK_IMPORTED_MODULE_2__["TabsSectionComponent"],
+    _pages_page_tabs_section_tabs_section_component__WEBPACK_IMPORTED_MODULE_2__["TabsSectionComponent"],
     _case_case_component__WEBPACK_IMPORTED_MODULE_3__["CaseComponent"],
-    _FormOrginazer_pages_page_page_component__WEBPACK_IMPORTED_MODULE_4__["PageComponent"],
-    _FormOrginazer_pages_pages_component__WEBPACK_IMPORTED_MODULE_5__["PagesComponent"],
-    _FormOrginazer_group_group_component__WEBPACK_IMPORTED_MODULE_6__["GroupComponent"]
+    _pages_page_page_component__WEBPACK_IMPORTED_MODULE_4__["PageComponent"],
+    _pages_pages_component__WEBPACK_IMPORTED_MODULE_5__["PagesComponent"],
 ];
+
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/form/form.component.html":
+/*!*************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/form/form.component.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf='display' [class]='className'>\r\n  <form [formGroup]=\"form\">\r\n    <formly-form [model]=\"model\" [fields]=\"fields\" [form]=\"form\"></formly-form>\r\n  <ng-content></ng-content>\r\n  <json-actions [actions]='formData.actions'></json-actions>\r\n  </form>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/form/form.component.scss":
+/*!*************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/form/form.component.scss ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "form {\n  margin: 10px; }\n\ntextarea {\n  width: 100%; }\n\n.formboarder {\n  border: 1px solid #999999 !important;\n  margin: 5px 0; }\n\nb {\n  padding: 5px; }\n\n.level1 {\n  margin-left: 450px;\n  padding-left: 450px;\n  background-color: red;\n  font-weight: 100;\n  font-size: 8pt; }\n"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/form/form.component.ts":
+/*!***********************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/form/form.component.ts ***!
+  \***********************************************************************************/
+/*! exports provided: FormComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormComponent", function() { return FormComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services */ "./projects/jsonformlib/src/lib/services/index.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var FormComponent = /** @class */ (function () {
+    function FormComponent(formService, service) {
+        this.formService = formService;
+        this.service = service;
+        this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({});
+        this.btclick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    Object.defineProperty(FormComponent.prototype, "className", {
+        get: function () {
+            return this.formData.className || "formboarder";
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FormComponent.prototype, "display", {
+        get: function () {
+            return this.service.display(this.formData);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    FormComponent.prototype.ngOnChanges = function (change) {
+        var _this = this;
+        this.model = this.service.CurrentModel;
+        if (this.formData) {
+            this.formService
+                .RowsMaptoFields(this.formData.Rows, this.model)
+                .subscribe(function (fields) { return (_this.fields = fields); });
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], FormComponent.prototype, "formData", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"])
+    ], FormComponent.prototype, "form", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], FormComponent.prototype, "btclick", void 0);
+    FormComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "json-form",
+            template: __webpack_require__(/*! ./form.component.html */ "./projects/jsonformlib/src/lib/components/pages/page/form/form.component.html"),
+            styles: [__webpack_require__(/*! ./form.component.scss */ "./projects/jsonformlib/src/lib/components/pages/page/form/form.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_2__["FormService"], _services__WEBPACK_IMPORTED_MODULE_2__["PageService"]])
+    ], FormComponent);
+    return FormComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/page.component.css":
+/*!*******************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/page.component.css ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/page.component.html":
+/*!********************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/page.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = " <div *ngIf=\"service.display(page)\">\r\n  <div [ngSwitch]=\"page.type\">\r\n    <div *ngSwitchCase=\"SupportTypes.pages\">\r\n      <json-pages [pages]='page'>\r\n      </json-pages>\r\n    </div>\r\n    <div *ngSwitchCase=\"SupportTypes.Form\">\r\n      <json-form [formData]='page'>\r\n      </json-form>\r\n    </div>\r\n    <div *ngSwitchCase=\"SupportTypes.tabgroup\">\r\n      <json-tabs-section [sections]='page.sections'></json-tabs-section>\r\n    </div>\r\n    <div *ngSwitchDefault>\r\n      <div class=\"alert alert-dange\">\r\n        The \"{{page.type}}\" is not supported\r\n      </div>\r\n      <div>It only supports <b>{{ElementTypes}} </b></div>\r\n      <br />\r\n      Page Define {{page | json}}\r\n    </div>\r\n  </div>\r\n\r\n</div>"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/page.component.ts":
+/*!******************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/page.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: supports, PageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "supports", function() { return supports; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageComponent", function() { return PageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services */ "./projects/jsonformlib/src/lib/services/index.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var supports = {
+    Form: "form",
+    tabgroup: "tabgroup",
+    pages: "pages"
+};
+var PageComponent = /** @class */ (function () {
+    function PageComponent(service) {
+        this.service = service;
+        this.SupportTypes = supports;
+    }
+    Object.defineProperty(PageComponent.prototype, "ElementTypes", {
+        get: function () {
+            var x = JSON.stringify(Object.values(this.SupportTypes));
+            return x
+                .replace(/"/g, "")
+                .replace("[", "")
+                .replace("]", "");
+        },
+        enumerable: true,
+        configurable: true
+    });
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], PageComponent.prototype, "page", void 0);
+    PageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "json-page",
+            template: __webpack_require__(/*! ./page.component.html */ "./projects/jsonformlib/src/lib/components/pages/page/page.component.html"),
+            styles: [__webpack_require__(/*! ./page.component.css */ "./projects/jsonformlib/src/lib/components/pages/page/page.component.css")]
+        }),
+        __metadata("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_1__["PageService"]])
+    ], PageComponent);
+    return PageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.css":
+/*!****************************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.css ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/deep/ .mat-tab-label{\r\n    color:white;\r\n    font-weight: 700;\r\n    background-color: #6b1c89;\r\n    font-size: 14px;\r\n    margin: 2px;\r\n}\r\n/deep/.mat-tab-label-active {\r\n    background-color:#17527c !important;\r\n} "
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.html":
+/*!*****************************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.html ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-tab-group>\n    <mat-tab *ngFor=\"let section of sections; let index = index;\" [label]='section.title' class='tabColor'>\n         <json-pages [pages]='section'></json-pages> \n        <!-- <json-actions [actions]='section.actions'></json-actions> -->\n    </mat-tab>\n</mat-tab-group>"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.ts":
+/*!***************************************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.ts ***!
+  \***************************************************************************************************/
+/*! exports provided: TabsSectionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsSectionComponent", function() { return TabsSectionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TabsSectionComponent = /** @class */ (function () {
+    function TabsSectionComponent() {
+    }
+    TabsSectionComponent.prototype.ngOnChanges = function () {
+    };
+    TabsSectionComponent.prototype.formAction = function (event) {
+        console.log("eventcls:", event);
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Array)
+    ], TabsSectionComponent.prototype, "sections", void 0);
+    TabsSectionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "json-tabs-section",
+            template: __webpack_require__(/*! ./tabs-section.component.html */ "./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.html"),
+            styles: [__webpack_require__(/*! ./tabs-section.component.css */ "./projects/jsonformlib/src/lib/components/pages/page/tabs-section/tabs-section.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TabsSectionComponent);
+    return TabsSectionComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/pages.component.css":
+/*!***************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/pages.component.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n.bold {\r\n  font-weight: 800;\r\n}\r\n\r\n"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/pages.component.html":
+/*!****************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/pages.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngFor=\"let page of pages.pages  let i = index\" [class]='page.className'>\r\n <json-page [page]= 'page'></json-page>\r\n</div>\r\n\r\n<json-actions [actions]='pages.actions'></json-actions>"
+
+/***/ }),
+
+/***/ "./projects/jsonformlib/src/lib/components/pages/pages.component.ts":
+/*!**************************************************************************!*\
+  !*** ./projects/jsonformlib/src/lib/components/pages/pages.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: PagesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PagesComponent", function() { return PagesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PagesComponent = /** @class */ (function () {
+    function PagesComponent() {
+    }
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], PagesComponent.prototype, "pages", void 0);
+    PagesComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "json-pages",
+            template: __webpack_require__(/*! ./pages.component.html */ "./projects/jsonformlib/src/lib/components/pages/pages.component.html"),
+            styles: [__webpack_require__(/*! ./pages.component.css */ "./projects/jsonformlib/src/lib/components/pages/pages.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], PagesComponent);
+    return PagesComponent;
+}());
+
 
 
 /***/ }),
@@ -1341,40 +1405,30 @@ var components = [
 /*!*********************************************************!*\
   !*** ./projects/jsonformlib/src/lib/jsonform.module.ts ***!
   \*********************************************************/
-/*! exports provided: JSONFormModule */
+/*! exports provided: FIELD_TYPES, Lib_Components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONFormModule", function() { return JSONFormModule; });
-/* harmony import */ var _components_fieldtypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/fieldtypes */ "./projects/jsonformlib/src/lib/components/fieldtypes/index.ts");
-/* harmony import */ var _ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngx-formly/core */ "./node_modules/@ngx-formly/core/fesm5/ngx-formly-core.js");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services */ "./projects/jsonformlib/src/lib/services/index.ts");
-/* harmony import */ var _Interface__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Interface */ "./projects/jsonformlib/src/lib/Interface/index.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Lib_Components", function() { return Lib_Components; });
+/* harmony import */ var _components_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/index */ "./projects/jsonformlib/src/lib/components/index.ts");
+/* harmony import */ var _pipes_myJson_pipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pipes/myJson.pipe */ "./projects/jsonformlib/src/lib/pipes/myJson.pipe.ts");
+/* harmony import */ var _pipes_pre_define_pipe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pipes/pre-define.pipe */ "./projects/jsonformlib/src/lib/pipes/pre-define.pipe.ts");
+/* harmony import */ var _pipes_dataformat_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pipes/dataformat.pipe */ "./projects/jsonformlib/src/lib/pipes/dataformat.pipe.ts");
+/* harmony import */ var _components_fieldtypes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/fieldtypes */ "./projects/jsonformlib/src/lib/components/fieldtypes/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FIELD_TYPES", function() { return _components_fieldtypes__WEBPACK_IMPORTED_MODULE_4__["FIELD_TYPES"]; });
 
 
 
 
-var JSONFormModule = /** @class */ (function () {
-    function JSONFormModule() {
-    }
-    JSONFormModule.forRoot = function (config) {
-        if (config === void 0) { config = {}; }
-        config.project["types"] = _components_fieldtypes__WEBPACK_IMPORTED_MODULE_0__["FIELD_TYPES"];
-        var a = _ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__["FormlyModule"].forRoot(config.project);
-        return {
-            ngModule: a.ngModule,
-            providers: _services__WEBPACK_IMPORTED_MODULE_2__["services"].concat(a.providers, [
-                {
-                    provide: _Interface__WEBPACK_IMPORTED_MODULE_3__["FIELD_VALIDATION"],
-                    useValue: config.field_validation
-                }
-            ])
-        };
-    };
-    return JSONFormModule;
-}());
 
+
+
+var Lib_Components = _components_index__WEBPACK_IMPORTED_MODULE_0__["components"].concat([
+    _pipes_myJson_pipe__WEBPACK_IMPORTED_MODULE_1__["MyJosnPipe"],
+    _pipes_pre_define_pipe__WEBPACK_IMPORTED_MODULE_2__["PreDefinePipe"],
+    _pipes_dataformat_pipe__WEBPACK_IMPORTED_MODULE_3__["DataformatPipe"]
+], _components_fieldtypes__WEBPACK_IMPORTED_MODULE_4__["field_types"]);
 
 
 /***/ }),
@@ -1476,7 +1530,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _actions_bt_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../actions/bt.actions */ "./projects/jsonformlib/src/lib/ngrxcore/actions/bt.actions.ts");
-/* harmony import */ var _services_BT_Service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/BT.Service */ "./projects/jsonformlib/src/lib/ngrxcore/services/BT.Service.ts");
+/* harmony import */ var _services_bt_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/bt.service */ "./projects/jsonformlib/src/lib/ngrxcore/services/bt.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1541,28 +1595,11 @@ var BTEffects = /** @class */ (function () {
     BTEffects = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Actions"],
-            _services_BT_Service__WEBPACK_IMPORTED_MODULE_6__["BTService"],
+            _services_bt_service__WEBPACK_IMPORTED_MODULE_6__["BTService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], BTEffects);
     return BTEffects;
 }());
-
-
-
-/***/ }),
-
-/***/ "./projects/jsonformlib/src/lib/ngrxcore/index.ts":
-/*!********************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/ngrxcore/index.ts ***!
-  \********************************************************/
-/*! exports provided: BTAction */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_bt_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions/bt.actions */ "./projects/jsonformlib/src/lib/ngrxcore/actions/bt.actions.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTAction", function() { return _actions_bt_actions__WEBPACK_IMPORTED_MODULE_0__["BTAction"]; });
-
 
 
 
@@ -1805,9 +1842,9 @@ function pagereducer(state, action) {
 
 /***/ }),
 
-/***/ "./projects/jsonformlib/src/lib/ngrxcore/services/BT.Service.ts":
+/***/ "./projects/jsonformlib/src/lib/ngrxcore/services/bt.service.ts":
 /*!**********************************************************************!*\
-  !*** ./projects/jsonformlib/src/lib/ngrxcore/services/BT.Service.ts ***!
+  !*** ./projects/jsonformlib/src/lib/ngrxcore/services/bt.service.ts ***!
   \**********************************************************************/
 /*! exports provided: BTService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2054,6 +2091,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var AppIndexService = /** @class */ (function () {
     function AppIndexService(http) {
         this.http = http;
+        this.fieldpreDefineLib = [];
+        this.fieldGroup = [];
     }
     AppIndexService.prototype.LoadIndex = function (indexPath) {
         var _this = this;
@@ -2083,6 +2122,20 @@ var AppIndexService = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    AppIndexService.prototype.getFieldGroup = function (fg) {
+        var x = this.fieldGroup
+            ? this.fieldGroup.find(function (c) { return c.libId === fg.libId; })
+            : null;
+        x = x ? x[fg.libId] : null;
+        if (fg.label && x) {
+            x[0][0].label = fg.label;
+        }
+        console.log(x);
+        return x;
+    };
+    AppIndexService.prototype.getPredefine = function (key) {
+        return this.fieldpreDefineLib.find(function (c) { return c.key === key; });
+    };
     Object.defineProperty(AppIndexService.prototype, "CurrentUser", {
         get: function () {
             try {
@@ -2114,6 +2167,8 @@ var AppIndexService = /** @class */ (function () {
                     var x = Object.keys(c.Libs).map(function (lib) { return _this.LoadLib(lib); });
                     return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["merge"])(x).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["combineAll"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (cc) {
                         _this.Libs = cc;
+                        _this.fieldpreDefineLib = _this.getLib("fieldpreDefine");
+                        _this.fieldGroup = _this.getLib("fieldGroup");
                         return cc;
                     }));
                 }
@@ -2148,8 +2203,11 @@ var AppIndexService = /** @class */ (function () {
         if (!this.Libs) {
             return undefined;
         }
-        var x = this.Libs.filter(function (c) { return c.key === key; }).map(function (c) { return c.data; })[0];
-        return x ? x[0] : undefined;
+        var x = this.Libs.filter(function (c) { return c.key === key; }).map(function (c) {
+            return c.data.flat();
+        })[0];
+        console.log("getLib", key);
+        return x;
     };
     AppIndexService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
@@ -2229,6 +2287,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Interface__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Interface */ "./projects/jsonformlib/src/lib/Interface/index.ts");
 /* harmony import */ var util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
 /* harmony import */ var util__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _appIndex_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./appIndex.service */ "./projects/jsonformlib/src/lib/services/appIndex.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2241,6 +2300,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+
 
 
 
@@ -2259,16 +2319,17 @@ function findRowCss(rowlen, cellClassName) {
         : cellClassName;
 }
 var FieldService = /** @class */ (function () {
-    function FieldService(validation) {
+    function FieldService(validation, indexservice) {
+        this.indexservice = indexservice;
         this.validator = { validation: validation };
     }
-    FieldService.prototype.Create = function (cell, rowLength, lib) {
+    FieldService.prototype.Create = function (cell, rowLength) {
         try {
             if (cell.template) {
                 return cell;
             }
             cell.key = cell.type === "info" ? cell.type : cell.key;
-            var field = this.CreateFormlyField(cell, lib);
+            var field = this.CreateFormlyField(cell);
             field.className = findRowCss(rowLength, cell.className);
             this.setupFieldByType(field);
             this.overwriteFields(field, cell);
@@ -2279,8 +2340,8 @@ var FieldService = /** @class */ (function () {
         }
     };
     // check prefedine UI, if not return orginial cell definitation.
-    FieldService.prototype.CreateFormlyField = function (field, lib) {
-        var predefine = lib ? lib.find(function (c) { return c.key === field.key; }) : undefined;
+    FieldService.prototype.CreateFormlyField = function (field) {
+        var predefine = this.indexservice.getPredefine(field.key);
         return predefine
             ? JSON.parse(JSON.stringify(predefine))
             : {
@@ -2350,7 +2411,7 @@ var FieldService = /** @class */ (function () {
     FieldService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_Interface__WEBPACK_IMPORTED_MODULE_1__["FIELD_VALIDATION"])),
-        __metadata("design:paramtypes", [Object])
+        __metadata("design:paramtypes", [Object, _appIndex_service__WEBPACK_IMPORTED_MODULE_3__["AppIndexService"]])
     ], FieldService);
     return FieldService;
 }());
@@ -2373,6 +2434,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var _field_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./field.service */ "./projects/jsonformlib/src/lib/services/field.service.ts");
+/* harmony import */ var _appIndex_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./appIndex.service */ "./projects/jsonformlib/src/lib/services/appIndex.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2386,39 +2448,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var FormService = /** @class */ (function () {
-    function FormService(fieldService) {
+    function FormService(fieldService, indexservice) {
         this.fieldService = fieldService;
+        this.indexservice = indexservice;
     }
-    FormService.prototype.FillPage = function (Rows, uiLib) {
-        if (!Rows) {
-            return undefined;
-        }
-        var result = [];
-        try {
-            Rows.forEach(function (fg) {
-                var r = fg;
-                if (fg) {
-                    if (r.libId) {
-                        var x = uiLib ? uiLib[r.libId] : null;
-                        result = x ? result.concat(x) : result;
-                    }
-                    else {
-                        result.push(r);
-                    }
-                }
-            });
-            return result;
-        }
-        catch (error) {
-            console.log("error", error, Rows);
-        }
-    };
-    FormService.prototype.RowsMaptoFields = function (Rows, model, fieldGroupLib, fieldPredifine) {
+    FormService.prototype.RowsMaptoFields = function (Rows, model) {
         var _this = this;
-        if (Rows) {
-            var result = this.FillPage(Rows, fieldGroupLib).map(function (fieldDef) {
-                var xx = _this.processfiedDef(fieldDef, fieldPredifine);
+        return this.indexservice.Libs$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(function () {
+            var result = _this.FillPage(Rows).map(function (fieldDef) {
+                var xx = _this.processfiedDef(fieldDef);
                 switch (xx.type) {
                     case "repeat":
                         model[xx.key] = xx.model;
@@ -2429,14 +2469,38 @@ var FormService = /** @class */ (function () {
                 return xx;
             });
             return result;
+        }, function (e) {
+            console.log(e);
+        }));
+    };
+    FormService.prototype.FillPage = function (Rows) {
+        var _this = this;
+        try {
+            var result = Rows.map(function (fg) {
+                if (fg) {
+                    if (fg.libId) {
+                        var x = _this.indexservice.getFieldGroup(fg);
+                        return x;
+                    }
+                    else {
+                        return [fg];
+                    }
+                }
+            });
+            result = result.flat();
+            return result;
+        }
+        catch (error) {
+            console.log("error", error, Rows);
         }
     };
-    FormService.prototype.processfiedDef = function (fieldDef, lib) {
+    FormService.prototype.processfiedDef = function (fieldDef) {
         var _this = this;
         switch (fieldDef.type) {
             case "repeat":
+            case "table":
                 fieldDef.fieldArray.fieldGroup = fieldDef.fieldArray.Rows.map(function (c) {
-                    return _this.processfiedDef(c, lib);
+                    return _this.processfiedDef(c);
                 });
                 return fieldDef;
             default:
@@ -2446,25 +2510,25 @@ var FormService = /** @class */ (function () {
                         : "row",
                     hideExpression: fieldDef.hideExpression,
                     fieldGroup: fieldDef.Rows
-                        ? fieldDef.Rows.map(function (c) { return _this.processfiedDef(c, lib); })
-                        : this.processField(fieldDef, lib)
+                        ? fieldDef.Rows.map(function (c) { return _this.processfiedDef(c); })
+                        : this.processField(fieldDef)
                 };
         }
     };
-    FormService.prototype.CreateField = function (field, rowlength, lib) {
+    FormService.prototype.CreateField = function (field, rowlength) {
         if (field.lifecycle) {
             field.lifecycle = this.addlifeCyle(field.lifecycle);
         }
-        return this.fieldService.Create(field, rowlength, lib);
+        return this.fieldService.Create(field, rowlength);
     };
-    FormService.prototype.processField = function (fieldDef, lib) {
+    FormService.prototype.processField = function (fieldDef) {
         var _this = this;
         try {
             var len_1 = fieldDef.length;
             if (!len_1) {
-                return [this.CreateField(fieldDef, len_1, lib)];
+                return [this.CreateField(fieldDef, len_1)];
             }
-            return fieldDef.map(function (f) { return _this.CreateField(f, len_1, lib); });
+            return fieldDef.map(function (f) { return _this.CreateField(f, len_1); });
         }
         catch (error) {
             console.error(error, fieldDef);
@@ -2489,7 +2553,8 @@ var FormService = /** @class */ (function () {
     };
     FormService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        __metadata("design:paramtypes", [_field_service__WEBPACK_IMPORTED_MODULE_3__["FieldService"]])
+        __metadata("design:paramtypes", [_field_service__WEBPACK_IMPORTED_MODULE_3__["FieldService"],
+            _appIndex_service__WEBPACK_IMPORTED_MODULE_4__["AppIndexService"]])
     ], FormService);
     return FormService;
 }());
@@ -2502,12 +2567,12 @@ var FormService = /** @class */ (function () {
 /*!********************************************************!*\
   !*** ./projects/jsonformlib/src/lib/services/index.ts ***!
   \********************************************************/
-/*! exports provided: PageService, FormService, FieldService, AppIndexService, DataService, services */
+/*! exports provided: PageService, FormService, FieldService, AppIndexService, DataService, JSON_SERVICES */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "services", function() { return services; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSON_SERVICES", function() { return JSON_SERVICES; });
 /* harmony import */ var _page_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page.service */ "./projects/jsonformlib/src/lib/services/page.service.ts");
 /* harmony import */ var _form_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form.service */ "./projects/jsonformlib/src/lib/services/form.service.ts");
 /* harmony import */ var _field_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./field.service */ "./projects/jsonformlib/src/lib/services/field.service.ts");
@@ -2533,7 +2598,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var services = [
+var JSON_SERVICES = [
     _appIndex_service__WEBPACK_IMPORTED_MODULE_3__["AppIndexService"],
     _page_service__WEBPACK_IMPORTED_MODULE_0__["PageService"],
     _form_service__WEBPACK_IMPORTED_MODULE_1__["FormService"],
@@ -2717,28 +2782,21 @@ var PageService = /** @class */ (function () {
 /*!*******************************************************!*\
   !*** ./projects/jsonformlib/src/lib/shared.module.ts ***!
   \*******************************************************/
-/*! exports provided: Lib_Components, SharedModule */
+/*! exports provided: SharedModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Lib_Components", function() { return Lib_Components; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SharedModule", function() { return SharedModule; });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _ngx_formly_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngx-formly/bootstrap */ "./node_modules/@ngx-formly/bootstrap/fesm5/ngx-formly-bootstrap.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _ngrxcore_ngrxcore_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ngrxcore/ngrxcore.module */ "./projects/jsonformlib/src/lib/ngrxcore/ngrxcore.module.ts");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components */ "./projects/jsonformlib/src/lib/components/index.ts");
-/* harmony import */ var _pipes_myJson_pipe__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pipes/myJson.pipe */ "./projects/jsonformlib/src/lib/pipes/myJson.pipe.ts");
-/* harmony import */ var _pipes_pre_define_pipe__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pipes/pre-define.pipe */ "./projects/jsonformlib/src/lib/pipes/pre-define.pipe.ts");
-/* harmony import */ var _pipes_dataformat_pipe__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pipes/dataformat.pipe */ "./projects/jsonformlib/src/lib/pipes/dataformat.pipe.ts");
-/* harmony import */ var _components_fieldtypes__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/fieldtypes */ "./projects/jsonformlib/src/lib/components/fieldtypes/index.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _ngrxcore_ngrxcore_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ngrxcore/ngrxcore.module */ "./projects/jsonformlib/src/lib/ngrxcore/ngrxcore.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2754,17 +2812,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-
-
-
-
-var Lib_Components = _components__WEBPACK_IMPORTED_MODULE_10__["components"].concat([
-    _pipes_myJson_pipe__WEBPACK_IMPORTED_MODULE_11__["MyJosnPipe"],
-    _pipes_pre_define_pipe__WEBPACK_IMPORTED_MODULE_12__["PreDefinePipe"],
-    _pipes_dataformat_pipe__WEBPACK_IMPORTED_MODULE_13__["DataformatPipe"]
-], _components_fieldtypes__WEBPACK_IMPORTED_MODULE_14__["field_types"]);
 var SharedModule = /** @class */ (function () {
     function SharedModule() {
     }
@@ -2777,23 +2824,22 @@ var SharedModule = /** @class */ (function () {
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ReactiveFormsModule"],
-                _ngx_formly_bootstrap__WEBPACK_IMPORTED_MODULE_5__["FormlyBootstrapModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatTooltipModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatTabsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatIconModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatToolbarModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatListModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatStepperModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatExpansionModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"],
-                _ngrxcore_ngrxcore_module__WEBPACK_IMPORTED_MODULE_9__["NgRxCoreModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSidenavModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatListModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTooltipModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTabsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatStepperModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatExpansionModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"],
+                _ngrxcore_ngrxcore_module__WEBPACK_IMPORTED_MODULE_8__["NgRxCoreModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSidenavModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatListModule"]
             ]
         })
     ], SharedModule);
@@ -2808,24 +2854,22 @@ var SharedModule = /** @class */ (function () {
 /*!************************************************!*\
   !*** ./projects/jsonformlib/src/public_api.ts ***!
   \************************************************/
-/*! exports provided: AppIndexService, DataService, SharedModule, Lib_Components, JSONFormModule, MyJosnPipe, getButtonState, getButtonStateAsync, BTAction, BTActionFailure, BTActionSuccess, BTService, NgRxCoreModule */
+/*! exports provided: AppIndexService, DataService, SharedModule, MyJosnPipe, getButtonState, getButtonStateAsync, BTAction, BTActionFailure, BTActionSuccess, BTService, NgRxCoreModule, Lib_Components, FIELD_TYPES, JSON_SERVICES, FIELD_VALIDATION */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lib_services_appIndex_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/services/appIndex.service */ "./projects/jsonformlib/src/lib/services/appIndex.service.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AppIndexService", function() { return _lib_services_appIndex_service__WEBPACK_IMPORTED_MODULE_0__["AppIndexService"]; });
+/* harmony import */ var _lib_Interface__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/Interface */ "./projects/jsonformlib/src/lib/Interface/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FIELD_VALIDATION", function() { return _lib_Interface__WEBPACK_IMPORTED_MODULE_0__["FIELD_VALIDATION"]; });
 
-/* harmony import */ var _lib_services_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/services/data.service */ "./projects/jsonformlib/src/lib/services/data.service.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return _lib_services_data_service__WEBPACK_IMPORTED_MODULE_1__["DataService"]; });
+/* harmony import */ var _lib_services_appIndex_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/services/appIndex.service */ "./projects/jsonformlib/src/lib/services/appIndex.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AppIndexService", function() { return _lib_services_appIndex_service__WEBPACK_IMPORTED_MODULE_1__["AppIndexService"]; });
 
-/* harmony import */ var _lib_shared_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/shared.module */ "./projects/jsonformlib/src/lib/shared.module.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SharedModule", function() { return _lib_shared_module__WEBPACK_IMPORTED_MODULE_2__["SharedModule"]; });
+/* harmony import */ var _lib_services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/services/data.service */ "./projects/jsonformlib/src/lib/services/data.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return _lib_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Lib_Components", function() { return _lib_shared_module__WEBPACK_IMPORTED_MODULE_2__["Lib_Components"]; });
-
-/* harmony import */ var _lib_jsonform_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/jsonform.module */ "./projects/jsonformlib/src/lib/jsonform.module.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "JSONFormModule", function() { return _lib_jsonform_module__WEBPACK_IMPORTED_MODULE_3__["JSONFormModule"]; });
+/* harmony import */ var _lib_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/shared.module */ "./projects/jsonformlib/src/lib/shared.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SharedModule", function() { return _lib_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"]; });
 
 /* harmony import */ var _lib_pipes_myJson_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/pipes/myJson.pipe */ "./projects/jsonformlib/src/lib/pipes/myJson.pipe.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MyJosnPipe", function() { return _lib_pipes_myJson_pipe__WEBPACK_IMPORTED_MODULE_4__["MyJosnPipe"]; });
@@ -2842,11 +2886,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTActionSuccess", function() { return _lib_ngrxcore_actions_bt_actions__WEBPACK_IMPORTED_MODULE_6__["BTActionSuccess"]; });
 
-/* harmony import */ var _lib_ngrxcore_services_BT_Service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./lib/ngrxcore/services/BT.Service */ "./projects/jsonformlib/src/lib/ngrxcore/services/BT.Service.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTService", function() { return _lib_ngrxcore_services_BT_Service__WEBPACK_IMPORTED_MODULE_7__["BTService"]; });
+/* harmony import */ var _lib_ngrxcore_services_bt_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./lib/ngrxcore/services/bt.service */ "./projects/jsonformlib/src/lib/ngrxcore/services/bt.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTService", function() { return _lib_ngrxcore_services_bt_service__WEBPACK_IMPORTED_MODULE_7__["BTService"]; });
 
 /* harmony import */ var _lib_ngrxcore_ngrxcore_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lib/ngrxcore/ngrxcore.module */ "./projects/jsonformlib/src/lib/ngrxcore/ngrxcore.module.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NgRxCoreModule", function() { return _lib_ngrxcore_ngrxcore_module__WEBPACK_IMPORTED_MODULE_8__["NgRxCoreModule"]; });
+
+/* harmony import */ var _lib_jsonform_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/jsonform.module */ "./projects/jsonformlib/src/lib/jsonform.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Lib_Components", function() { return _lib_jsonform_module__WEBPACK_IMPORTED_MODULE_9__["Lib_Components"]; });
+
+/* harmony import */ var _lib_components_fieldtypes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lib/components/fieldtypes */ "./projects/jsonformlib/src/lib/components/fieldtypes/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FIELD_TYPES", function() { return _lib_components_fieldtypes__WEBPACK_IMPORTED_MODULE_10__["FIELD_TYPES"]; });
+
+/* harmony import */ var _lib_services__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lib/services */ "./projects/jsonformlib/src/lib/services/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "JSON_SERVICES", function() { return _lib_services__WEBPACK_IMPORTED_MODULE_11__["JSON_SERVICES"]; });
+
 
 /*
  * Public API Surface of jsonformlib
@@ -2862,12 +2916,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 /***/ }),
 
-/***/ "./spa/$$_lazy_route_resource lazy recursive":
-/*!**********************************************************!*\
-  !*** ./spa/$$_lazy_route_resource lazy namespace object ***!
-  \**********************************************************/
+/***/ "./restaurant/$$_lazy_route_resource lazy recursive":
+/*!*****************************************************************!*\
+  !*** ./restaurant/$$_lazy_route_resource lazy namespace object ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2883,45 +2940,39 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "./spa/$$_lazy_route_resource lazy recursive";
+webpackEmptyAsyncContext.id = "./restaurant/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./spa/app/Routes.ts":
-/*!***************************!*\
-  !*** ./spa/app/Routes.ts ***!
-  \***************************/
+/***/ "./restaurant/app/Routes.ts":
+/*!**********************************!*\
+  !*** ./restaurant/app/Routes.ts ***!
+  \**********************************/
 /*! exports provided: routes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
-/* harmony import */ var _components_demo_demo_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/demo/demo.component */ "./spa/app/components/demo/demo.component.ts");
-/* harmony import */ var _components_formbuilder_formbuilder_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/formbuilder/formbuilder.component */ "./spa/app/components/formbuilder/formbuilder.component.ts");
-/* harmony import */ var projects_jsonformlib_src_lib_components_case_case_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! projects/jsonformlib/src/lib/components/case/case.component */ "./projects/jsonformlib/src/lib/components/case/case.component.ts");
-
+/* harmony import */ var projects_jsonformlib_src_lib_components_case_case_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! projects/jsonformlib/src/lib/components/case/case.component */ "./projects/jsonformlib/src/lib/components/case/case.component.ts");
+/* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/auth-guard.service */ "./restaurant/app/services/auth-guard.service.ts");
 
 
 var routes = [
-    { path: '', component: _components_demo_demo_component__WEBPACK_IMPORTED_MODULE_0__["DemoComponent"] },
-    { path: 'case/:id', component: _components_formbuilder_formbuilder_component__WEBPACK_IMPORTED_MODULE_1__["FormbuilderComponent"] },
-    { path: 'forms/:id', component: _components_formbuilder_formbuilder_component__WEBPACK_IMPORTED_MODULE_1__["FormbuilderComponent"] },
-    { path: 'public/:id', component: _components_formbuilder_formbuilder_component__WEBPACK_IMPORTED_MODULE_1__["FormbuilderComponent"] },
-    { path: 'restaurant/:id', component: _components_formbuilder_formbuilder_component__WEBPACK_IMPORTED_MODULE_1__["FormbuilderComponent"] },
-    { path: 'view/:id', component: projects_jsonformlib_src_lib_components_case_case_component__WEBPACK_IMPORTED_MODULE_2__["CaseComponent"] },
-    {
-        path: 'Formbuilder', component: _components_formbuilder_formbuilder_component__WEBPACK_IMPORTED_MODULE_1__["FormbuilderComponent"]
-    }
+    { path: '', redirectTo: 'public/fieldtypes', pathMatch: 'full' },
+    { path: '**', redirectTo: 'public/fieldtypes', pathMatch: 'full' },
+    { path: 'admin/:id', component: projects_jsonformlib_src_lib_components_case_case_component__WEBPACK_IMPORTED_MODULE_0__["CaseComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]] },
+    { path: 'public/:id', component: projects_jsonformlib_src_lib_components_case_case_component__WEBPACK_IMPORTED_MODULE_0__["CaseComponent"] },
+    { path: 'restaurant/:id', component: projects_jsonformlib_src_lib_components_case_case_component__WEBPACK_IMPORTED_MODULE_0__["CaseComponent"] }
 ];
 
 
 /***/ }),
 
-/***/ "./spa/app/app.component.css":
-/*!***********************************!*\
-  !*** ./spa/app/app.component.css ***!
-  \***********************************/
+/***/ "./restaurant/app/app.component.css":
+/*!******************************************!*\
+  !*** ./restaurant/app/app.component.css ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2929,10 +2980,10 @@ module.exports = ""
 
 /***/ }),
 
-/***/ "./spa/app/app.component.html":
-/*!************************************!*\
-  !*** ./spa/app/app.component.html ***!
-  \************************************/
+/***/ "./restaurant/app/app.component.html":
+/*!*******************************************!*\
+  !*** ./restaurant/app/app.component.html ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2940,21 +2991,20 @@ module.exports = "<router-outlet></router-outlet>"
 
 /***/ }),
 
-/***/ "./spa/app/app.component.ts":
-/*!**********************************!*\
-  !*** ./spa/app/app.component.ts ***!
-  \**********************************/
+/***/ "./restaurant/app/app.component.ts":
+/*!*****************************************!*\
+  !*** ./restaurant/app/app.component.ts ***!
+  \*****************************************/
 /*! exports provided: AppComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var _services_datastore_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/datastore.service */ "./spa/app/services/datastore.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! projects/jsonformlib/src/public_api */ "./projects/jsonformlib/src/public_api.ts");
-/* harmony import */ var spa_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! spa/environments/environment */ "./spa/environments/environment.ts");
-/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/user.service */ "./spa/app/services/user.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! projects/jsonformlib/src/public_api */ "./projects/jsonformlib/src/public_api.ts");
+/* harmony import */ var spa_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! spa/environments/environment */ "./spa/environments/environment.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/user.service */ "./restaurant/app/services/user.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2968,16 +3018,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var AppComponent = /** @class */ (function () {
-    function AppComponent(appIndex, userService, datastore) {
+    function AppComponent(appIndex, userService) {
         this.appIndex = appIndex;
         this.userService = userService;
-        this.datastore = datastore;
         this.booksList = [];
-        // const userRef = this.userService.getReferenceUser().ref;
-        // this.Index$ = this.datastore.getIndex().valueChanges();
-        appIndex.LoadIndex(spa_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].path)
+        appIndex.LoadIndex(spa_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].path)
             .subscribe();
     }
     AppComponent.prototype.ngOnInit = function () {
@@ -3000,14 +3046,13 @@ var AppComponent = /** @class */ (function () {
         configurable: true
     });
     AppComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! ./app.component.html */ "./spa/app/app.component.html"),
-            styles: [__webpack_require__(/*! ./app.component.css */ "./spa/app/app.component.css")]
+            template: __webpack_require__(/*! ./app.component.html */ "./restaurant/app/app.component.html"),
+            styles: [__webpack_require__(/*! ./app.component.css */ "./restaurant/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_2__["AppIndexService"],
-            _services_user_service__WEBPACK_IMPORTED_MODULE_4__["UserService"],
-            _services_datastore_service__WEBPACK_IMPORTED_MODULE_0__["DataStoreService"]])
+        __metadata("design:paramtypes", [projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_1__["AppIndexService"],
+            _services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -3016,37 +3061,29 @@ var AppComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./spa/app/app.module.ts":
-/*!*******************************!*\
-  !*** ./spa/app/app.module.ts ***!
-  \*******************************/
+/***/ "./restaurant/app/app.module.ts":
+/*!**************************************!*\
+  !*** ./restaurant/app/app.module.ts ***!
+  \**************************************/
 /*! exports provided: AppModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _services_datastore_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/datastore.service */ "./spa/app/services/datastore.service.ts");
-/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/auth.service */ "./spa/app/services/auth.service.ts");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./spa/app/app.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Routes */ "./spa/app/Routes.ts");
-/* harmony import */ var _components_demo_demo_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/demo/demo.component */ "./spa/app/components/demo/demo.component.ts");
-/* harmony import */ var _components_jsoneditor_jsoneditor_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/jsoneditor/jsoneditor.component */ "./spa/app/components/jsoneditor/jsoneditor.component.ts");
-/* harmony import */ var _components_formbuilder_formbuilder_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/formbuilder/formbuilder.component */ "./spa/app/components/formbuilder/formbuilder.component.ts");
-/* harmony import */ var projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! projects/jsonformlib/src/public_api */ "./projects/jsonformlib/src/public_api.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../environments/environment */ "./spa/environments/environment.ts");
-/* harmony import */ var _services_validation_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/validation.service */ "./spa/app/services/validation.service.ts");
-/* harmony import */ var _services_mybt_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/mybt.service */ "./spa/app/services/mybt.service.ts");
-/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angularfire2/auth */ "./node_modules/angularfire2/auth/index.js");
-/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(angularfire2_auth__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/auth-guard.service */ "./spa/app/services/auth-guard.service.ts");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/user.service */ "./spa/app/services/user.service.ts");
-/* harmony import */ var projects_jsonformlib_src_lib_jsonform_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! projects/jsonformlib/src/lib/jsonform.module */ "./projects/jsonformlib/src/lib/jsonform.module.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ "./restaurant/app/app.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Routes */ "./restaurant/app/Routes.ts");
+/* harmony import */ var projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! projects/jsonformlib/src/public_api */ "./projects/jsonformlib/src/public_api.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../environments/environment */ "./restaurant/environments/environment.ts");
+/* harmony import */ var _services_validation_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/validation.service */ "./restaurant/app/services/validation.service.ts");
+/* harmony import */ var _services_mybt_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/mybt.service */ "./restaurant/app/services/mybt.service.ts");
+/* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./services/auth-guard.service */ "./restaurant/app/services/auth-guard.service.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./services/user.service */ "./restaurant/app/services/user.service.ts");
+/* harmony import */ var projects_jsonformlib_src_lib_Interface__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! projects/jsonformlib/src/lib/Interface */ "./projects/jsonformlib/src/lib/Interface/index.ts");
+/* harmony import */ var _ngx_formly_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ngx-formly/core */ "./node_modules/@ngx-formly/core/fesm5/ngx-formly-core.js");
+/* harmony import */ var _ngx_formly_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ngx-formly/bootstrap */ "./node_modules/@ngx-formly/bootstrap/fesm5/ngx-formly-bootstrap.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3056,12 +3093,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
 
 
 
@@ -3079,30 +3110,26 @@ var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
-            declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _components_jsoneditor_jsoneditor_component__WEBPACK_IMPORTED_MODULE_8__["JsonEditorComponent"],
-                _components_demo_demo_component__WEBPACK_IMPORTED_MODULE_7__["DemoComponent"],
-                _components_formbuilder_formbuilder_component__WEBPACK_IMPORTED_MODULE_9__["FormbuilderComponent"]
-            ].concat(projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_10__["Lib_Components"]),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_4__["Lib_Components"].concat([
+                _app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"]
+            ]),
             imports: [
-                _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forRoot(_Routes__WEBPACK_IMPORTED_MODULE_6__["routes"], { useHash: true, enableTracing: false }),
-                projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_10__["SharedModule"],
-                projects_jsonformlib_src_lib_jsonform_module__WEBPACK_IMPORTED_MODULE_18__["JSONFormModule"].forRoot(_services_validation_service__WEBPACK_IMPORTED_MODULE_12__["ValidationService"].project),
-                angularfire2__WEBPACK_IMPORTED_MODULE_2__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_11__["environment"].firebase),
-                angularfire2_auth__WEBPACK_IMPORTED_MODULE_14__["AngularFireAuthModule"],
-                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__["AngularFirestoreModule"].enablePersistence(),
+                projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_4__["SharedModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(_Routes__WEBPACK_IMPORTED_MODULE_3__["routes"], { useHash: true, enableTracing: false }),
+                _ngx_formly_core__WEBPACK_IMPORTED_MODULE_11__["FormlyModule"],
+                _ngx_formly_bootstrap__WEBPACK_IMPORTED_MODULE_12__["FormlyBootstrapModule"],
+                _ngx_formly_core__WEBPACK_IMPORTED_MODULE_11__["FormlyModule"].forRoot(_services_validation_service__WEBPACK_IMPORTED_MODULE_6__["ValidationService"].CreateFormlyConfig({ types: projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_4__["FIELD_TYPES"] }))
             ],
-            providers: [
-                // BTService
-                _services_mybt_service__WEBPACK_IMPORTED_MODULE_13__["myBTService"].Service,
-                _services_datastore_service__WEBPACK_IMPORTED_MODULE_0__["DataStoreService"],
-                _services_user_service__WEBPACK_IMPORTED_MODULE_17__["UserService"],
-                _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"],
-                _services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]
-            ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            providers: projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_4__["JSON_SERVICES"].concat([
+                _services_mybt_service__WEBPACK_IMPORTED_MODULE_7__["myBTService"].Service,
+                _services_user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"],
+                _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"],
+                {
+                    provide: projects_jsonformlib_src_lib_Interface__WEBPACK_IMPORTED_MODULE_10__["FIELD_VALIDATION"], useValue: [_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].project]
+                }
+            ]),
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"]]
         }),
         __metadata("design:paramtypes", [])
     ], AppModule);
@@ -3113,362 +3140,10 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./spa/app/components/demo/demo.component.css":
-/*!****************************************************!*\
-  !*** ./spa/app/components/demo/demo.component.css ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./spa/app/components/demo/demo.component.html":
-/*!*****************************************************!*\
-  !*** ./spa/app/components/demo/demo.component.html ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>Build your application easy, clear and agile</h1>\r\n<div class=\"row\">\r\n  <div class=\"col-sm-4\">\r\n    <div class=\"well\">\r\n      <p>Start your cloud form app from powerful agile form builder</p>\r\n    </div>\r\n    <div class=\"well\">\r\n      <p>Modifty your design and see instant result</p>\r\n    </div>\r\n    <div class=\"well\">\r\n      <p>Host your form in cloud and contact us for fullstack development</p>\r\n    </div>\r\n    <div class=\"well\">\r\n      <p>For large enterprise system, easy use it for start and verify your design. contact us to integrity with your\r\n        backend\r\n        api </p>\r\n    </div>\r\n    <div class=\"well\">\r\n      <p>Flexible host options with google angular base application </p>\r\n    </div>\r\n\r\n  </div>\r\n  <div class=\"col-sm-4\">\r\n\r\n    <h3>Sample forms:</h3>\r\n    <json-menu></json-menu>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "./spa/app/components/demo/demo.component.ts":
-/*!***************************************************!*\
-  !*** ./spa/app/components/demo/demo.component.ts ***!
-  \***************************************************/
-/*! exports provided: DemoComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DemoComponent", function() { return DemoComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var DemoComponent = /** @class */ (function () {
-    function DemoComponent() {
-    }
-    DemoComponent.prototype.ngOnInit = function () {
-    };
-    DemoComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-demo',
-            template: __webpack_require__(/*! ./demo.component.html */ "./spa/app/components/demo/demo.component.html"),
-            styles: [__webpack_require__(/*! ./demo.component.css */ "./spa/app/components/demo/demo.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], DemoComponent);
-    return DemoComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./spa/app/components/formbuilder/formbuilder.component.css":
-/*!******************************************************************!*\
-  !*** ./spa/app/components/formbuilder/formbuilder.component.css ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "#preivew {\r\n  padding: 4px;\r\n  box-shadow:1px 1px grey, -0.4em 0 0.4em grey;\r\n}\r\n.flex {\r\n  display: flex;\r\n}\r\n/* Create two equal columns that sits next to each other */\r\n.flex1 {\r\n  flex: 50%;\r\n  padding: 30px;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./spa/app/components/formbuilder/formbuilder.component.html":
-/*!*******************************************************************!*\
-  !*** ./spa/app/components/formbuilder/formbuilder.component.html ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "toggle <a data-toggle=\"collapse\" href=\"#preivew\" role=\"button\" aria-expanded=\"false\" aria-controls=\"preivew\">\n    <b> preivew</b>\n</a>\n<a data-toggle=\"collapse\" href=\"#editors\" role=\"button\" aria-expanded=\"true\" aria-controls=\"editors\">\n    <b> editor </b>\n</a>\n<div class='flex'>\n    <div id='preivew' class='collapse in flex1'>\n        <json-case #preview></json-case>\n    </div>\n    <div id='editors' class='collapse in flex1'>\n        <json-editor></json-editor>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "./spa/app/components/formbuilder/formbuilder.component.ts":
-/*!*****************************************************************!*\
-  !*** ./spa/app/components/formbuilder/formbuilder.component.ts ***!
-  \*****************************************************************/
-/*! exports provided: FormbuilderComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormbuilderComponent", function() { return FormbuilderComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var FormbuilderComponent = /** @class */ (function () {
-    function FormbuilderComponent() {
-    }
-    FormbuilderComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "app-formbuilder",
-            template: __webpack_require__(/*! ./formbuilder.component.html */ "./spa/app/components/formbuilder/formbuilder.component.html"),
-            styles: [__webpack_require__(/*! ./formbuilder.component.css */ "./spa/app/components/formbuilder/formbuilder.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], FormbuilderComponent);
-    return FormbuilderComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./spa/app/components/jsoneditor/JsonEditorOptions.ts":
-/*!************************************************************!*\
-  !*** ./spa/app/components/jsoneditor/JsonEditorOptions.ts ***!
-  \************************************************************/
-/*! exports provided: JsonEditorOptions */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonEditorOptions", function() { return JsonEditorOptions; });
-var JsonEditorOptions = /** @class */ (function () {
-    function JsonEditorOptions() {
-        this.escapeUnicode = false;
-        this.sortObjectKeys = false;
-        this.history = true;
-        this.mode = "tree";
-        this.search = true;
-        this.indentation = 2;
-    }
-    return JsonEditorOptions;
-}());
-
-
-
-/***/ }),
-
-/***/ "./spa/app/components/jsoneditor/jsondeitor.component.html":
-/*!*****************************************************************!*\
-  !*** ./spa/app/components/jsoneditor/jsondeitor.component.html ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        <label for=\"file-upload\" class=\"custom-file-upload btn btn-primary\">\r\n            Load a JSON UI Design\r\n        </label>\r\n        <input id=\"file-upload\" type=\"file\" (change)='LoadFile($event)' />\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n        <button (click)='SaveFile()' class=\" btn btn-primary\">Save Design</button>\r\n    </div>\r\n</div>\r\n\r\n<div id=\"jsoneditor\" #jsoneditor></div>\r\n<code>{{model |json}}</code>"
-
-/***/ }),
-
-/***/ "./spa/app/components/jsoneditor/jsoneditor.component.scss":
-/*!*****************************************************************!*\
-  !*** ./spa/app/components/jsoneditor/jsoneditor.component.scss ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "#jsoneditor {\n  height: 800px;\n  /* Should be removed. Only for demonstration */ }\n\ninput[type=\"file\"] {\n  display: none; }\n\n.custom-file-upload {\n  border: 1px solid #ccc;\n  display: inline-block;\n  padding: 6px 12px;\n  cursor: pointer; }\n"
-
-/***/ }),
-
-/***/ "./spa/app/components/jsoneditor/jsoneditor.component.ts":
-/*!***************************************************************!*\
-  !*** ./spa/app/components/jsoneditor/jsoneditor.component.ts ***!
-  \***************************************************************/
-/*! exports provided: JsonEditorComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonEditorComponent", function() { return JsonEditorComponent; });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var jsoneditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jsoneditor */ "./node_modules/jsoneditor/index.js");
-/* harmony import */ var jsoneditor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jsoneditor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _JsonEditorOptions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./JsonEditorOptions */ "./spa/app/components/jsoneditor/JsonEditorOptions.ts");
-/* harmony import */ var projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! projects/jsonformlib/src/public_api */ "./projects/jsonformlib/src/public_api.ts");
-/* harmony import */ var projects_jsonformlib_src_lib_services_page_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! projects/jsonformlib/src/lib/services/page.service */ "./projects/jsonformlib/src/lib/services/page.service.ts");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var JsonEditorComponent = /** @class */ (function () {
-    function JsonEditorComponent(jsonPipe, pageService, store) {
-        this.jsonPipe = jsonPipe;
-        this.pageService = pageService;
-        this.store = store;
-        this._data = {};
-    }
-    Object.defineProperty(JsonEditorComponent.prototype, "model", {
-        get: function () {
-            return this._data ? this._data['model'] : { "title": "placeholder" };
-        },
-        enumerable: true,
-        configurable: true
-    });
-    JsonEditorComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.editor = new jsoneditor__WEBPACK_IMPORTED_MODULE_2__(this.josneditor.nativeElement, this.setupOption(), this._data);
-        this.store.select(function (s) { return s.page; })
-            .subscribe(function (a) {
-            if (_this.pageService._currentPage) {
-                _this.contents = _this.pageService._currentPage.defCase;
-            }
-        });
-    };
-    Object.defineProperty(JsonEditorComponent.prototype, "keys", {
-        get: function () {
-            if (!this.contents) {
-                return undefined;
-            }
-            var keys = this.jsonPipe.FindKeys(this.contents);
-            return keys;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    JsonEditorComponent.prototype.setupOption = function () {
-        var _this = this;
-        var option = new _JsonEditorOptions__WEBPACK_IMPORTED_MODULE_3__["JsonEditorOptions"]();
-        option.modes = ['code', 'tree']; // allowed modes 'form', 'text', 'tree', 'view'
-        option.mode = "code";
-        option.onChange = function () {
-            Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["timer"])(1000).subscribe(function () {
-                _this.pageService.CurrentPage = { defCase: _this.editor.get(), model: null, src: 'JsonEditorComponent' };
-            });
-            Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["timer"])(30000).subscribe(function () {
-                localStorage.setItem('page', JSON.stringify(_this.pageService._currentPage));
-            });
-        };
-        option.onModeChange = function (newMode, oldMode) {
-            option.mode = newMode;
-            switch (option.mode) {
-                case "tree":
-                    _this.editor.expandAll();
-                    option.onEditable = function (node) {
-                        switch (node.field) {
-                            case "label":
-                                return true;
-                            case "title":
-                                return true;
-                            case "level":
-                                return true;
-                            default:
-                                return false;
-                        }
-                    };
-                    break;
-                default:
-                    option.onEditable = null;
-                    break;
-            }
-            console.log('Mode switched from', oldMode, 'to', newMode, option.onEditable);
-        };
-        return option;
-    };
-    JsonEditorComponent.prototype.AutoSave = function () {
-    };
-    JsonEditorComponent.prototype.SaveFile = function () {
-        var pom = document.createElement("a");
-        var text = JSON.stringify(this.editor.get());
-        pom.download = this.filename;
-        var blob = new Blob([text], { type: "application/json" });
-        pom.href = URL.createObjectURL(blob);
-        pom.textContent = "Download " + this.filename;
-        if (document.createEvent) {
-            var event_1 = document.createEvent("MouseEvents");
-            event_1.initEvent("click", true, true);
-            pom.dispatchEvent(event_1);
-        }
-        else {
-            pom.click();
-        }
-    };
-    JsonEditorComponent.prototype.LoadFile = function (event) {
-        var _this = this;
-        this.filename = event.target.files[0].name;
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            try {
-                _this.contents = JSON.parse(e.target["result"]);
-            }
-            catch (error) {
-                console.log("error:", error);
-            }
-        };
-        reader.readAsText(event.target.files[0]);
-    };
-    Object.defineProperty(JsonEditorComponent.prototype, "contents", {
-        set: function (value) {
-            try {
-                value = value ? value : {};
-                this.editor.set(value);
-                this.pageService.CurrentPage = { defCase: value, model: null, src: 'JsonEditorComponent' };
-                if (this.editor.options.JsonEditorMode === 'tree') {
-                    this.editor.expandAll();
-                }
-            }
-            catch (error) {
-                console.log(error, value);
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("jsoneditor"),
-        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
-    ], JsonEditorComponent.prototype, "josneditor", void 0);
-    JsonEditorComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            // tslint:disable-next-line:component-selector
-            selector: "json-editor",
-            template: __webpack_require__(/*! ./jsondeitor.component.html */ "./spa/app/components/jsoneditor/jsondeitor.component.html"),
-            styles: [__webpack_require__(/*! ./jsoneditor.component.scss */ "./spa/app/components/jsoneditor/jsoneditor.component.scss")],
-            providers: [projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_4__["MyJosnPipe"]]
-        }),
-        __metadata("design:paramtypes", [projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_4__["MyJosnPipe"],
-            projects_jsonformlib_src_lib_services_page_service__WEBPACK_IMPORTED_MODULE_5__["PageService"],
-            _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]])
-    ], JsonEditorComponent);
-    return JsonEditorComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./spa/app/services/auth-guard.service.ts":
-/*!************************************************!*\
-  !*** ./spa/app/services/auth-guard.service.ts ***!
-  \************************************************/
+/***/ "./restaurant/app/services/auth-guard.service.ts":
+/*!*******************************************************!*\
+  !*** ./restaurant/app/services/auth-guard.service.ts ***!
+  \*******************************************************/
 /*! exports provided: AuthGuard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3478,7 +3153,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth.service */ "./spa/app/services/auth.service.ts");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth.service */ "./restaurant/app/services/auth.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3517,10 +3192,10 @@ var AuthGuard = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./spa/app/services/auth.service.ts":
-/*!******************************************!*\
-  !*** ./spa/app/services/auth.service.ts ***!
-  \******************************************/
+/***/ "./restaurant/app/services/auth.service.ts":
+/*!*************************************************!*\
+  !*** ./restaurant/app/services/auth.service.ts ***!
+  \*************************************************/
 /*! exports provided: AuthService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3528,78 +3203,18 @@ var AuthGuard = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
 
 var AuthService = /** @class */ (function () {
-    function AuthService(afAuth, afs, router) {
-        var _this = this;
-        this.afAuth = afAuth;
-        this.afs = afs;
-        this.router = router;
-        //// Get auth data, then get firestore user document || null
-        this.user = this.afAuth.authState.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["switchMap"])(function (user) {
-            if (user) {
-                return _this.afs.doc("users/" + user.uid).valueChanges();
-            }
-            else {
-                return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(null);
-            }
-        }));
+    function AuthService() {
     }
-    AuthService.prototype.googleLogin = function () {
-        var provider = new firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"].GoogleAuthProvider();
-        return this.oAuthLogin(provider);
-    };
-    AuthService.prototype.oAuthLogin = function (provider) {
-        var _this = this;
-        return this.afAuth.auth.signInWithPopup(provider)
-            .then(function (credential) {
-            _this.updateUserData(credential.user);
-        });
-    };
-    AuthService.prototype.updateUserData = function (user) {
-        // Sets user data to firestore on login
-        var userRef = this.afs.doc("users/" + user.uid);
-        var data = {
-            uid: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL
-        };
-        return userRef.set(data, { merge: true });
-    };
-    AuthService.prototype.signOut = function () {
-        var _this = this;
-        this.afAuth.auth.signOut().then(function () {
-            _this.router.navigate(['/']);
-        });
-    };
     AuthService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_3__["AngularFireAuth"],
-            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
     ], AuthService);
     return AuthService;
 }());
@@ -3608,146 +3223,10 @@ var AuthService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./spa/app/services/datastore.service.ts":
-/*!***********************************************!*\
-  !*** ./spa/app/services/datastore.service.ts ***!
-  \***********************************************/
-/*! exports provided: DataStoreService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataStoreService", function() { return DataStoreService; });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../environments/environment */ "./spa/environments/environment.ts");
-/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user.service */ "./spa/app/services/user.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
-/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(angularfire2_firestore__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! projects/jsonformlib/src/public_api */ "./projects/jsonformlib/src/public_api.ts");
-/* harmony import */ var projects_jsonformlib_src_lib_services_page_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! projects/jsonformlib/src/lib/services/page.service */ "./projects/jsonformlib/src/lib/services/page.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var collection_name = 'items';
-var DataStoreService = /** @class */ (function () {
-    /**
-     * @constructor DataStoreService
-     * @param {AngularFirestore} afs
-     * @param {UserService} userService
-     */
-    function DataStoreService(afs, userService, index, pageservice, http) {
-        this.afs = afs;
-        this.userService = userService;
-        this.index = index;
-        this.pageservice = pageservice;
-        this.http = http;
-        this.Collection = this.afs.collection(collection_name);
-    }
-    /**
-     * create void function
-     * Add a new data to bookings collection.
-     * @param {any} data
-     * @memberof DataStoreService
-     */
-    DataStoreService.prototype.create = function (data) {
-        // Persist a document id
-        var id = this.afs.createId();
-        data.id = id;
-        this.Collection.add(data);
-    };
-    DataStoreService.prototype.UploadAssets = function () {
-        var _this = this;
-        var def = this.index.appIndex.basepath;
-        this.afs.collection(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].project).doc('index').set(this.index.appIndex);
-        Object.entries(this.index.appIndex.Resources).forEach(function (resource, index) {
-            var dom = resource[0];
-            var url = null;
-            if (dom !== 'defaultDomin') {
-                Object.values(resource[1]).forEach(function (v) {
-                    if (v)
-                        url = _this.pageservice.getPath(v, dom, "uiDefPath");
-                    if (url) {
-                        _this.http.get(url).subscribe(function (c) {
-                            _this.afs.collection(dom).doc(c.caseID).set(c).catch(function (e) {
-                                console.log(c.caseID, e);
-                            });
-                        });
-                    }
-                });
-            }
-        });
-    };
-    DataStoreService.prototype.getIndex = function () {
-        return this.afs.collection(collection_name, function (ref) { return ref; });
-    };
-    DataStoreService.prototype.setIndex = function (index) {
-        index.id = "demo";
-        this.afs.collection("index").doc('demo').set(index).then(function (c) { return console.log(c); });
-        //this.afs.collection('index').add(index);
-    };
-    /**
-     * getByUserRef function
-     * Get bunch of books by userRef
-     * @param {any} userRef
-     * @returns {AngularFirestoreCollection<any>} booksCollection
-     * @memberof DataStoreService
-     */
-    DataStoreService.prototype.getByUserRef = function (userRef) {
-        return this.Collection = this.afs.collection(collection_name, function (ref) { return ref.where('user', '==', userRef); });
-    };
-    /**
-     * getByFilters void function.
-     * Get books collections by filter params
-     * @param {string} size
-     * @param {string} category
-     * @param {string} author
-     * @param {number} minPrice
-     * @param {number} maxPrice
-     * @memberof DataStoreService
-     */
-    DataStoreService.prototype.getByFilters = function (size, category, author, minPrice, maxPrice) {
-        return this.Collection = this.afs.collection(collection_name, function (ref) {
-            // Compose a query using multiple .where() methods
-            return ref
-                .where('size', '==', size)
-                .where('category', '==', category)
-                .where('author', '==', author)
-                .where('price', '>', minPrice)
-                .where('price', '<', maxPrice);
-        });
-    };
-    DataStoreService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Injectable"])(),
-        __metadata("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"], _user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"],
-            projects_jsonformlib_src_public_api__WEBPACK_IMPORTED_MODULE_5__["AppIndexService"],
-            projects_jsonformlib_src_lib_services_page_service__WEBPACK_IMPORTED_MODULE_6__["PageService"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]])
-    ], DataStoreService);
-    return DataStoreService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./spa/app/services/mybt.service.ts":
-/*!******************************************!*\
-  !*** ./spa/app/services/mybt.service.ts ***!
-  \******************************************/
+/***/ "./restaurant/app/services/mybt.service.ts":
+/*!*************************************************!*\
+  !*** ./restaurant/app/services/mybt.service.ts ***!
+  \*************************************************/
 /*! exports provided: myBTService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3758,7 +3237,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var projects_jsonformlib_src_lib_services_appIndex_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! projects/jsonformlib/src/lib/services/appIndex.service */ "./projects/jsonformlib/src/lib/services/appIndex.service.ts");
-/* harmony import */ var projects_jsonformlib_src_lib_ngrxcore_services_BT_Service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! projects/jsonformlib/src/lib/ngrxcore/services/BT.Service */ "./projects/jsonformlib/src/lib/ngrxcore/services/BT.Service.ts");
+/* harmony import */ var projects_jsonformlib_src_lib_ngrxcore_services_bt_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! projects/jsonformlib/src/lib/ngrxcore/services/bt.service */ "./projects/jsonformlib/src/lib/ngrxcore/services/bt.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -3793,6 +3272,7 @@ var myBTService = /** @class */ (function (_super) {
     }
     myBTService_1 = myBTService;
     myBTService.prototype.Fired = function (data) {
+        console.log("myBTService Fired");
         var x = {};
         switch (data.action.id) {
             case 'myorder':
@@ -3838,7 +3318,7 @@ var myBTService = /** @class */ (function (_super) {
         return { url: data.action.redirect };
     };
     myBTService.Service = {
-        provide: projects_jsonformlib_src_lib_ngrxcore_services_BT_Service__WEBPACK_IMPORTED_MODULE_4__["BTService"],
+        provide: projects_jsonformlib_src_lib_ngrxcore_services_bt_service__WEBPACK_IMPORTED_MODULE_4__["BTService"],
         useClass: myBTService_1
     };
     myBTService = myBTService_1 = __decorate([
@@ -3848,16 +3328,16 @@ var myBTService = /** @class */ (function (_super) {
     ], myBTService);
     return myBTService;
     var myBTService_1;
-}(projects_jsonformlib_src_lib_ngrxcore_services_BT_Service__WEBPACK_IMPORTED_MODULE_4__["BTService"]));
+}(projects_jsonformlib_src_lib_ngrxcore_services_bt_service__WEBPACK_IMPORTED_MODULE_4__["BTService"]));
 
 
 
 /***/ }),
 
-/***/ "./spa/app/services/user.service.ts":
-/*!******************************************!*\
-  !*** ./spa/app/services/user.service.ts ***!
-  \******************************************/
+/***/ "./restaurant/app/services/user.service.ts":
+/*!*************************************************!*\
+  !*** ./restaurant/app/services/user.service.ts ***!
+  \*************************************************/
 /*! exports provided: UserService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3888,17 +3368,25 @@ var UserService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./spa/app/services/validation.service.ts":
-/*!************************************************!*\
-  !*** ./spa/app/services/validation.service.ts ***!
-  \************************************************/
+/***/ "./restaurant/app/services/validation.service.ts":
+/*!*******************************************************!*\
+  !*** ./restaurant/app/services/validation.service.ts ***!
+  \*******************************************************/
 /*! exports provided: ValidationService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidationService", function() { return ValidationService; });
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../environments/environment */ "./spa/environments/environment.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../environments/environment */ "./restaurant/environments/environment.ts");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 
 function PatternValidator(control, pattern) {
     return control.value && control.value.match(pattern);
@@ -3909,6 +3397,9 @@ function DifferenceInDays(firstDate, secondDate) {
 var ValidationService = /** @class */ (function () {
     function ValidationService() {
     }
+    ValidationService.CreateFormlyConfig = function (value) {
+        return __assign({}, ValidationService.projectConfig.valiationConfig, value);
+    };
     ValidationService.getValidatorErrorMessage = function (code) {
         return ValidationService.ErrorValidateMessage[code];
     };
@@ -3941,9 +3432,10 @@ var ValidationService = /** @class */ (function () {
         }
         return x ? null : { eionline: field.key };
     };
-    ValidationService.project = {
+    ValidationService.projectConfig = {
+        name: _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].project,
         field_validation: [_environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].project],
-        project: {
+        valiationConfig: {
             validators: [
                 { name: _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].project, validation: ValidationService.eionlineValidator }
             ],
@@ -3960,6 +3452,61 @@ var ValidationService = /** @class */ (function () {
     return ValidationService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./restaurant/environments/environment.ts":
+/*!************************************************!*\
+  !*** ./restaurant/environments/environment.ts ***!
+  \************************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+var environment = {
+    production: false,
+    path: "/assets/AppResources/index.json",
+    project: "restaurant"
+};
+/*
+ * In development mode, to ignore zone related error stack frames such as
+ * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
+ * import the following file, but please comment it out in production mode
+ * because it will have performance impact when throw error
+ */
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
+/***/ "./restaurant/main.ts":
+/*!****************************!*\
+  !*** ./restaurant/main.ts ***!
+  \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./restaurant/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./restaurant/environments/environment.ts");
+
+
+
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
+}
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+    .catch(function (err) { return console.log(err); });
 
 
 /***/ }),
@@ -4001,40 +3548,14 @@ var environment = {
 
 /***/ }),
 
-/***/ "./spa/main.ts":
-/*!*********************!*\
-  !*** ./spa/main.ts ***!
-  \*********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./spa/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./spa/environments/environment.ts");
-
-
-
-
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
-}
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
-    .catch(function (err) { return console.log(err); });
-
-
-/***/ }),
-
 /***/ 0:
-/*!***************************!*\
-  !*** multi ./spa/main.ts ***!
-  \***************************/
+/*!**********************************!*\
+  !*** multi ./restaurant/main.ts ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\dev\jsonform\spa\main.ts */"./spa/main.ts");
+module.exports = __webpack_require__(/*! C:\dev\jsonform\restaurant\main.ts */"./restaurant/main.ts");
 
 
 /***/ })

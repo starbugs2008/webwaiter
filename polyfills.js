@@ -5384,10 +5384,10 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
 
 /***/ }),
 
-/***/ "./spa/polyfills.ts":
-/*!**************************!*\
-  !*** ./spa/polyfills.ts ***!
-  \**************************/
+/***/ "./restaurant/polyfills.ts":
+/*!*********************************!*\
+  !*** ./restaurant/polyfills.ts ***!
+  \*********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5467,13 +5467,13 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 1:
-/*!********************************!*\
-  !*** multi ./spa/polyfills.ts ***!
-  \********************************/
+/*!***************************************!*\
+  !*** multi ./restaurant/polyfills.ts ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\dev\jsonform\spa\polyfills.ts */"./spa/polyfills.ts");
+module.exports = __webpack_require__(/*! C:\dev\jsonform\restaurant\polyfills.ts */"./restaurant/polyfills.ts");
 
 
 /***/ })
